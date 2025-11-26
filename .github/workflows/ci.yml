@@ -15,7 +15,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: src/yh_resume.tex
+          root_file: yh_resume.tex
+          working_directory: src
+          args:
       - name: Build html
         uses: SichangHe/pdf2htmlEX-action@v0.0.2
         with:
