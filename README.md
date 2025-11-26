@@ -45,8 +45,28 @@ cd /resume
 ```
 
 * Deployments:
-  * Cloudflare Pages
-    * [developers.cloudflare.com/pages/get-started/git-integration](https://developers.cloudflare.com/pages/get-started/git-integration/)
+  * Deploy to Cloudflare Pages with Github actions CI/CD pipelins
+    * CI will auto triger wih git push event but can skipped.
+      * GitHub Action
+        * [github.com/marketplace/actions/github-action-for-latex](https://github.com/marketplace/actions/github-action-for-latex)
+        * [github.com/marketplace/actions/pdf2htmlex-action](https://github.com/marketplace/actions/pdf2htmlex-action)
+        * [github.com/marketplace/actions/add-commit](https://github.com/marketplace/actions/add-commit)
+        * [docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container](docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container)
+        * [docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container](https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container)
+    * CD
+      * [developers.cloudflare.com/pages/get-started/git-integration](https://developers.cloudflare.com/pages/get-started/git-integration/)
+
+    
+```shell
+#git comment
+#update docs and test github action ci
+#skip ci
+[skip ci] update **/*.tex
+[skip ci] update README
+[skip ci] update ci.yml
+[skip actions] update docs
+```
+
   * Any Linux host with Nginx + pdf2htmlex bundled page output(html/css/javascript all in one)
     * Install the CLI prerequisites on your localhost
     * Git clone this repo on your localhost
