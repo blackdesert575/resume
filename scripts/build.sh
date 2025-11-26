@@ -31,4 +31,4 @@ content='<link rel="icon" type="image/x-icon" href="./favicon.ico">\n<meta http-
 sed -i "/<head>/i $content" $BASE_DIR/output/index.html
 
 #builld docker image
-docker build . -t docker.io/focal1119/resume:prod
+# docker build . -t docker.io/focal1119/resume:prod
