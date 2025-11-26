@@ -6,6 +6,10 @@ LaTeX template for my personal resume forked from [jakegut / resume](https://git
 ## quick start
 
 * requirement packages
+  * texlive-full
+    * [tug.org/texlive](https://tug.org/texlive/)
+    * [TeX Live - Quick install for Unix](https://www.tug.org/texlive/quickinstall.html)
+    * install via package manager
 
 ```shell
 # Debian / Ubuntu
@@ -20,7 +24,36 @@ brew install mactex
 sudo tlmgr update --self
 ```
 
-*  Nginx + pdf2htmlex bundled page output(html/css/javascript all in one)
+  * pdf2htmlEX
+    * [github.com/pdf2htmlEX/pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX)
+    * [Building#building-yourself](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Building#building-yourself)
+    * [Download-Debian-Archive](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Debian-Archive)
+    * [Download-Docker-Image](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Docker-Image)
+    * [github.com/pdf2htmlEX/pdf2htmlEX/wiki/Quick-Start](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Quick-Start)
+
+* docker, docker compose, podman, podman compose
+  * if you want to build resume in a container with docker/podman compose
+
+```shell
+git clone https://github.com/blackdesert575/resume.git
+
+cd resume
+docker compose up -d
+docker exec -it latex-tools-box bash
+cd /resume
+./scripts/pipelines_ci.sh
+```
+
+* Deployments:
+  * Cloudflare Pages
+    * [developers.cloudflare.com/pages/get-started/git-integration](https://developers.cloudflare.com/pages/get-started/git-integration/)
+  * Any Linux host with Nginx + pdf2htmlex bundled page output(html/css/javascript all in one)
+    * Install the CLI prerequisites on your localhost
+    * Git clone this repo on your localhost
+    * manual edit src/*.tex
+    * generate *.pdf from *.tex
+    * generate *.html from *.pdf
+    * deploy with docker images  
 
 ```shell
 #clone repo to your work dir
@@ -41,27 +74,18 @@ uv run test_robots.py
 python3 test_robots.py
 ```
 
-## Project workflows/ CI/CD pipelines
-
-* Nginx + pdf2htmlex bundled page output(html/css/javascript all in one)
-  * Install the CLI prerequisites on your localhost
-  * Git clone this repo on your localhost
-  * manual edit src/*.tex
-  * generate *.pdf from *.tex
-  * generate *.html from *.pdf
-  * deploy with docker images
-
-* node.js + react.js single-page-cv app with pdf output
-  * Install the CLI prerequisites on your localhost
-  * Git clone this repo on your localhost
-  * manual edit src/*.tex
-  * generate *.pdf from *.tex
-  * mv *.pdf to single-page-cv/public
-  * devops under single-page-cv with next dev server
-  * deploy with docker images
+  * node.js + react.js single-page-cv app with pdf output
+    * Install the CLI prerequisites on your localhost
+    * Git clone this repo on your localhost
+    * manual edit src/*.tex
+    * generate *.pdf from *.tex
+    * mv *.pdf to single-page-cv/public
+    * devops under single-page-cv with next dev server
+    * deploy with docker images
 
 ## to do list
 
+* Migrate to Cloudflare Worker & Pages
 * Compare Nginx + pdf2htmlex bundled page output(html/css/javascript all in one) VS node.js + react.js single-page-cv app with pdf output
 * integration with CI/CD pipelines with GitHub Actions/Jenkins/ArgoCD...etc
 ~~* pdf2htmlEX (generate *.html from *.pdf)~~

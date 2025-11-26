@@ -1,12 +1,21 @@
-version: '3.8'
-
 services:
-    resume:
-        hostname: resume
-        container_name: resume
-        image: focal1119/resume:prod
-        restart: always
-        # entrypoint: tail -f /dev/null
-        ports:
-          - "8001:80"
-        # network_mode: "host"
+  # resume:
+  #     hostname: resume
+  #     container_name: resume
+  #     image: focal1119/resume:prod
+  #     restart: always
+  #     # entrypoint: tail -f /dev/null
+  #     ports:
+  #       - "8001:80"
+  #     # network_mode: "host"
+  latex-tools-box:
+    hostname: latex-tools-box
+    container_name: latex-tools-box    
+    image: docker.io/focal1119/latex-tools-box:ci
+    restart: always
+    entrypoint: tail -f /dev/null
+    volumes:
+      - ./:/resume
+    # ports:
+    #   - "8000:80"
+    # network_mode: "host"
