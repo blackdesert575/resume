@@ -1,7 +1,17 @@
 FROM alpine:3.22
 
-COPY /output /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+RUN  apk update
+RUN sudo apk add \
+        sudo         \
+        tar          \
+        wget         \
+        git          \
+        pkgconfig    \
+        ruby         \
+        cmake        \
+        make         \
+        gcc          \
+        g++          \
+        gettext      \
+        openjdk8     \
+        jq
