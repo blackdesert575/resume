@@ -177,6 +177,10 @@
     \resumeItem{Performed \textbf{root cause analysis and troubleshooting} for service errors, performance issues, and system anomalies using \textbf{Linux CLI tools, metrics, and logs} across cloud and on-premise environments.}
     \resumeItem{Extended system \textbf{observability and reliability} by integrating \textbf{Prometheus, Grafana, Alertmanager, Consul, and custom exporters}, enabling proactive monitoring and incident response.}
     \resumeItem{Supported deployment, upgrades, and operational maintenance of product systems deployed in \textbf{customer environments}, including \textbf{AWS, Cloudflare, and hybrid on-premise setups}.}
+    \resumeItem{Reviewed and operated an existing \textbf{GitOps-based Kubernetes deployment} using \textbf{GitLab and Argo CD} on \textbf{AWS EKS}, originally introduced as part of a CNCF-aligned containerization initiative.}
+      \resumeSubItem{Led the \textbf{controlled decommissioning of Argo CD–managed Kubernetes workloads} after evaluating system scale, cost, and operational overhead, determining that the current product stage did not yet justify full Kubernetes adoption.}
+      \resumeSubItem{Identified and resolved \textbf{Argo CD and Helm chart compatibility issues}, including backward-incompatible YAML parsing behavior that prevented clean teardown of managed workloads, ensuring safe removal without leaving orphaned resources.}
+      \resumeSubItem{Safely \textbf{scaled down all worker nodes while preserving the EKS control plane}, maintaining the ability to reintroduce Kubernetes-based deployments in a future migration phase when system scale and requirements mature.}
   \resumeItemListEnd
 
 
