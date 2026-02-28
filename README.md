@@ -140,7 +140,11 @@ which latexmk
 latexmk --version
 
 cd src/
-latexmk yh_resume.tex
+# latexmk yh_resume.tex
+
+latexmk -xelatex -interaction=nonstopmode yh_resume_cht.tex
+#clean build uneeded files and keep *.pdf
+latexmk -c
 ```
 
 * build *.tex to output html with htlatex
