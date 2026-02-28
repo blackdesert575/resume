@@ -7,6 +7,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -20,6 +21,13 @@
 \usepackage{tabularx}
 % only for pdflatex
 % \input{glyphtounicode}
+
+% chinese fonts
+\usepackage[UTF8,scheme=plain,fontset=none]{ctex}
+\setCJKmainfont{AR PL UMing TW}
+\setCJKsansfont{AR PL UMing TW}
+\setCJKmonofont{AR PL UMing TW}
+
 
 % fontawesome
 \usepackage{fontawesome5}
@@ -154,7 +162,7 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge Joe (Yung-Hung) Huang} \\ \vspace{5pt}    
+    \textbf{\Huge Joe (永鴻) 黃} \\ \vspace{5pt}    
     \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{\href{mailto:yunghunghuang984@gmail.com}{yunghunghuang984@gmail.com}} \hspace{1pt} $|$
     \hspace{1pt} \faGithub \hspace{2pt} \texttt{\href{https://github.com/blackdesert575}{blackdesert575}} \hspace{1pt} $|$
     %\hspace{1pt} \faYoutube \hspace{2pt} \texttt{harshibar} \hspace{1pt} $|$
@@ -163,52 +171,52 @@
 \end{center}
 
 %-----------EXPERIENCE-----------
-\section{EXPERIENCE}
+\section{工作經驗}
   \resumeSubHeadingListStart
 
 \resumeSubheading
   {System / DevOps Engineer}{Jun. 2025 -- Present}
-  {Logic Solutions Inc.}{}
+  {雷技資訊科技有限公司}{}
   \resumeItemListStart
-    \resumeItem{Working in \textbf{Linux} terminal environment.}
-    \resumeItem{Built and maintained a Rocky Linux–based Amazon Machine Image (AMI) for EC2 using Packer}
-    \resumeItem{Maintained \textbf{AWS and on-premise infrastructure} primarily within the Taiwan engineering team, where \textbf{Git-based Infrastructure as Code workflows (Terraform / Terragrunt / Atlantis)} are actively implemented.}
-    \resumeItem{Assisted in reviewing and validating existing technical documentation and infrastructure processes, identifying inconsistencies across regions.}
-    \resumeItem{Maintained \textbf{system initialization automation via Ansible (Linux configuration, Java runtime, Nginx, RabbitMQ, NFS setup)}}
-    \resumeItem{Built and maintained \textbf{Jenkins CI/CD pipelines using Groovy scripts for TW engineering workflows.}}
-    \resumeItem{Managed \textbf{Bastion host and internal asset tracking stack (Consul + Golang-based services)}, integrating EC2 metadata into centralized access control.}
-    \resumeItem{Analyzed \textbf{system resource utilization and performance metrics} through observability stack (Prometheus / Grafana) to identify \textbf{infrastructure bottlenecks and propose appropriate optimization solutions}.}
-    \resumeItem{Maintained \textbf{observability stack (Prometheus, Grafana, Consul)} and supported system monitoring operations.}
+    \resumeItem{在\textbf{Linux}終端機環境中工作。}
+    \resumeItem{使用Pakcer 構築與維護以\textbf{Rocky Linux}作為基底的EC2 機器映像檔(AMI)}
+    \resumeItem{主要在台灣工程團隊內，維運\textbf{AWS 與地端(on-premise)基礎設施}，並實際導入與使用 以 Git 為核心的 \textbf{Infrastructure as Code 工作流程(Terraform / Terragrunt / Atlantis)}}
+    \resumeItem{協助審查與驗證既有\textbf{技術文件與基礎設施流程}，並辨識跨區域之間的流程與標準不一致問題。}
+    \resumeItem{維護並實作 透過 Ansible 進行的系統初始化自動化(包含 Linux 設定、Java 執行環境、Nginx、RabbitMQ、NFS 部署)}
+    \resumeItem{為台灣工程團隊建立與維護 基於 Groovy Script 的 Jenkins CI/CD 流水線。}
+    \resumeItem{管理 Bastion 主機與內部資產追蹤系統(Consul + Golang 開發的微服務)，並將 EC2 metadata 整合至集中式存取控制機制。}
+    \resumeItem{透過觀測性系統(Prometheus / Grafana)分析 系統資源使用情況與效能指標，以識別 基礎設施瓶頸並提出合適的優化方案。}
+    \resumeItem{維護觀測性技術堆疊\textbf{(Prometheus、Grafana、Consul)}，並支援整體系統監控運作。}
   \resumeItemListEnd
 
   \resumeSubheading
   {System/Site Reliability Engineering (SRE)/DevOps Engineering}{Nov. 2023 -- Dec. 2024}
-  {Mending Technology CO., LTD.}{}  
+  {眾鼎科技有限公司}{}  
   \resumeItemListStart
-    \resumeItem{Working in \textbf{Linux} terminal environment.}
-    \resumeItem{Participated in on-call rotations(about 1 week a month), troubleshooting issues in Prod environment with teams members}
-    \resumeItem{Supporting a cryptocurrency exchange platform on \textbf{AWS or on-premise infrastructure.}}
-    \resumeItem{Administration \textbf{k8s(kubernates) clusters on AWS or on-premise environment.}}
-    \resumeItem{\textbf{AWS/Cloudflare Infrastructure management} with \textbf{Pulumi/Ansible.}}
-    \resumeItem{Administration \textbf{CI/CD pipelines with Gitlab CI or Jenkins.}}
+    \resumeItem{在\textbf{Linux}終端機環境中工作。}
+    \resumeItem{參與輪值待命(on-call，約每月 1 週)，與團隊成員共同排除正式環境(Prod)中的各類問題。}
+    \resumeItem{支援部署於 AWS 或地端基礎設施上的加密貨幣交易所平台。}
+    \resumeItem{管理與維運部署於 AWS 或地端環境的 Kubernetes(k8s)叢集。}
+    \resumeItem{使用 Pulumi / Ansible 進行 AWS 與 Cloudflare 基礎設施管理。}
+    \resumeItem{管理與維運 基於 GitLab CI 或 Jenkins 的 CI/CD 流水線。}
   \resumeItemListEnd
 
   \resumeSubheading
   {Site Reliability Engineering (SRE)/DevOps/Cloud engineering}{Nov. 2021 -- April. 2023}
-  {CloudRock Technology Co., Ltd}{}  
+  {雲磐科技有限公司}{}  
   \resumeItemListStart
-    \resumeItem{Working in \textbf{Linux terminal environment.}}
-    \resumeItem{Participated in on-call rotations, troubleshooting issues with teams members}
-    \resumeItem{Development of \textbf{Python automation project for web monitoring.}}
-    \resumeItem{Development of \textbf{streaming platflorm project based on GCP(GKE)/Aliyun(ACK).}}
-    \resumeItem{\textbf{Cloud(AWS/GCP/Aliyun/Cloudflare/...etc) Infrastructure management} with \textbf{JumpServer.}}
-    \resumeItem{Administration \textbf{k8s(kubernates clusters) on AWS(EKS)/GCP(GKE)/Aliyun(ACK).}}
-    \resumeItem{Administration \textbf{CI/CD pipelines with Gitlab CI/jenkins/Tekton.}}
+    \resumeItem{在\textbf{Linux}終端機環境中工作。}
+    \resumeItem{參與輪值待命(on-call)，與團隊成員共同排除各類系統問題。}
+    \resumeItem{開發 基於 Python 的網站監控自動化專案。}
+    \resumeItem{開發 基於 GCP(GKE)與阿里雲(ACK)的串流平台專案。}
+    \resumeItem{透過 JumpServer 管理 雲端基礎設施(AWS/GCP/阿里雲/Cloudflare 等)。}
+    \resumeItem{管理與維運部署於 AWS(EKS)/GCP(GKE)/阿里雲(ACK)的 Kubernetes(k8s)叢集。}
+    \resumeItem{管理與維運 基於 GitLab CI/Jenkins/Tekton 的 CI/CD 流水線。}
   \resumeItemListEnd
 
 \resumeSubheading
-  {IoT Bootcamp (Full-Stack \& System Fundamentals Training)}{Jan. 2021 -- May. 2021}
-  {Industrial Technology Research Institute (ITRI)}{}
+  {物聯網整合開發人才就業班}{Jan. 2021 -- May. 2021}
+  {工業技術研究院 產業學院}{}
   \resumeItemListStart
     \resumeItem{Completed an intensive hands-on training program covering \textbf{web development fundamentals, system programming, Linux environments, networking basics, and IoT system integration}.}
     \resumeSubItem{Building an \textbf{IoT monitoring system (IndoorAirBox)} using \textbf{Raspberry Pi and ESP8266}, focusing on temperature and humidity data collection with available course resources.}
@@ -218,13 +226,13 @@
 
 %-----------PROJECTS-----------
 
-\section{PROJECTS}
+\section{專案}
 
     \resumeSubHeadingListStart
     \resumeProjectHeading
         {\textbf{homelab}} {Jun. 2023 -- Present}
         \resumeItemListStart
-          \resumeItem{Building infrastructure with Proxmox VE to support many persoanl projects's Linux Lab environment.}
+          \resumeItem{建置並維運 基於 \textbf{Proxmox VE} 的基礎設施，以支援多個個人專案的 Linux 實驗環境。}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -232,52 +240,52 @@
     \resumeProjectHeading
         {\textbf{resume}} {Mar. 2023 -- Present}
         \resumeItemListStart
-          \resumeItem{Building \textbf{a online CV website} based on \textbf{LaTeX} to record my experience, projects, education, skills.}          
+          \resumeItem{建置 基於 \textbf{LaTeX的線上履歷網站}，用於記錄我的工作經歷、專案成果、學歷背景與技能。}          
         \resumeItemListEnd          
     \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
-\section {EDUCATION}
+\section {學歷}
 \resumeSubHeadingListStart
 \resumeSubheading
-  {National Dong Hwa University}{Sep. 2016 -- Jan. 2019}
-  {Master of Science in Materials Science and Engineering}{Shoufeng, Hualien}
+  {國立東華大學}{Sep. 2016 -- Jan. 2019}
+  {材料科學與工程學系 碩士}{壽豐鄉, 花蓮縣}
     \resumeItemListStart
-  \resumeItem {\textbf{Thesis}: Ultrafast Pump-probe Transient Absorption Spectroscopy of Layer-controllable Molybdenum Disulfide Films}
+  \resumeItem {\textbf{論文}: 可層數控制之二硫化鉬薄膜的超快激發-探測瞬間吸收光譜之研究}
     \resumeItem 
-        {\textbf{Research}: Semiconductor Materials }
+        {\textbf{研究主題}: 半導體材料}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \resumeSubHeadingListStart
 \resumeSubheading
-  {National Dong Hwa University}{Sep. 2012 -- Jun. 2016}
-  {Bachelor of Science in Materials Science and Engineering}{Shoufeng, Hualien}
+  {國立東華大學}{Sep. 2012 -- Jun. 2016}
+  {材料科學與工程學系 學士}{壽豐鄉, 花蓮縣}
     \resumeItemListStart
-    \resumeItem {Program of Advanced Materials}
+    \resumeItem {先進材料學程}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{SKILLS}
+\section{技能}
  \begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
-     \textbf{Languages}{: Mandarin (native), English (professional working proficiency)}\vspace{2pt} \\
-     \textbf{Programming Languages}{: Python(proficient), Bash(competence), SQL(competence), Rust(competence), Golang(beginner)}\vspace{2pt} \\
-     \textbf{Version Control}{: git} \\
-     \textbf{Frameworks}{: Django, FastAPI, Selenium, pandas, SQLAlchemy} \\
-     \textbf{Operating system}{: Linux(proficient), macOS(competence), Windows(beginner)}\\
-     \textbf{Continuous Integration(CI) \& Continuous Delivery(CD)}{:GitLab Runner, Github Actions, Jenkins, Tekton Pipelines, Argo CD} \\
-     \textbf{Streaming \& Messaging}{: Apache RocketMQ, RabbitMQ} \\
-     \textbf{Scheduling \& Orchestration}{: Kubernetes(EKS, GKE, ACK, k0s, k3s...etc)} \\
-     \textbf{Subsystems \& For Kubernetes}{: ingress-nginx, cert-manager, ECK(Elastic Cloud on Kubernetes) operator, KEDA, Istio...etc} \\
-     \textbf{Service Proxy}{: NGINX, HAProxy, MetalLB, Envoy} \\     
-     \textbf{Coordination \& Service Discovery}{: Apache Zookeeper, Nacos, Consul} \\
-     \textbf{Container Registry}{: Harbor} \\
-     \textbf{Automation \& Configuration}{: Ansible, Atlantis, Terraform, Terragrunt, Pulumi, Ansible} \\
-     \textbf{Cloud Providers}{: AWS, Google Cloud, Alibaba Cloud, Cloudflare} \\
-     \textbf{Certification}{: AWS Certified Solutions Architect Associate, AWS Certified Cloud Practitioner}
+     \textbf{語言}{: Mandarin (native), English (professional working proficiency)}\vspace{2pt} \\
+     \textbf{程式語言}{: Python(proficient), Bash(competence), SQL(competence), Rust(competence), Golang(beginner)}\vspace{2pt} \\
+     \textbf{版本控制}{: git} \\
+     \textbf{軟體框架}{: Django, FastAPI, Selenium, pandas, SQLAlchemy} \\
+     \textbf{作業系統}{: Linux(proficient), macOS(competence), Windows(beginner)}\\
+     \textbf{持續整合(CI) \& 持續部屬(CD)}{:GitLab Runner, Github Actions, Jenkins, Tekton Pipelines, Argo CD} \\
+     \textbf{串流 \& 訊息傳遞}{: Apache RocketMQ, RabbitMQ} \\
+     \textbf{容器排程 \& 編排}{: Kubernetes(EKS, GKE, ACK, k0s, k3s...etc)} \\
+     \textbf{Kubernetes 底下運行的子系統}{: ingress-nginx, cert-manager, ECK(Elastic Cloud on Kubernetes) operator, KEDA, Istio...etc} \\
+     \textbf{服務代理}{: NGINX, HAProxy, MetalLB, Envoy} \\     
+     \textbf{微服務發現與協調}{: Apache Zookeeper, Nacos, Consul} \\
+     \textbf{容器映像檔倉庫}{: Harbor} \\
+     \textbf{自動化配置}{: Ansible, Atlantis, Terraform, Terragrunt, Pulumi, Ansible} \\
+     \textbf{雲端供應商}{: AWS, Google Cloud, Alibaba Cloud, Cloudflare} \\
+     \textbf{專業認證}{: AWS Certified Solutions Architect Associate, AWS Certified Cloud Practitioner}
     }}
  \end{itemize}
 

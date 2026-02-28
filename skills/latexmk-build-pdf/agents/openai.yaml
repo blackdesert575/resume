@@ -1,0 +1,4 @@
+interface:
+  display_name: "LaTeX PDF Build"
+  short_description: "Compile TeX to PDF with latexmk."
+  default_prompt: "Use this skill to compile TeX files into PDF using latexmk and troubleshoot build failures."

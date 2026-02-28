@@ -105,9 +105,10 @@ python3 test_robots.py
 
 ## to do list
 
-* Migrate to Cloudflare Worker & Pages
+* Add multiple languages(English/Chinese) support
+~~* Migrate to Cloudflare Worker & Pages~~
 * Compare Nginx + pdf2htmlex bundled page output(html/css/javascript all in one) VS node.js + react.js single-page-cv app with pdf output
-* integration with CI/CD pipelines with GitHub Actions/Jenkins/ArgoCD...etc
+~~* integration with CI/CD pipelines with GitHub Actions/Jenkins/ArgoCD...etc~~
 ~~* pdf2htmlEX (generate *.html from *.pdf)~~
 ~~* refactoring output from pdf2htmlEX with React+Next.js Web framework~~
 
