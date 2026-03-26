@@ -6,17 +6,17 @@ This directory records the current workflow, the future workflow, and the planne
 
 Recommended reading order:
 
-1. [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
-2. [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
-3. [git-workflow-cheatsheet.md](/home/hong/repos/resume/docs/git-workflow-cheatsheet.md)
-4. [single-page-cv-tech-stack.md](/home/hong/repos/resume/docs/single-page-cv-tech-stack.md)
-5. [react-nextjs-learning-guide.md](/home/hong/repos/resume/docs/react-nextjs-learning-guide.md)
-6. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-7. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+1. [current-workflow.md](./current-workflow.md)
+2. [future-workflow.md](./future-workflow.md)
+3. [git-workflow-cheatsheet.md](./git-workflow-cheatsheet.md)
+4. [single-page-cv-tech-stack.md](./single-page-cv-tech-stack.md)
+5. [react-nextjs-learning-guide.md](./react-nextjs-learning-guide.md)
+6. [rearchitecture-plan.md](./rearchitecture-plan.md)
+7. [content-model.md](./content-model.md)
 
 ## Documents
 
-### [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
+### [current-workflow.md](./current-workflow.md)
 
 Describes the current operational flow:
 
@@ -28,7 +28,7 @@ Describes the current operational flow:
 
 Read this first if the goal is to understand the current pain points.
 
-### [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
+### [future-workflow.md](./future-workflow.md)
 
 Describes the recommended future CI/CD workflow:
 
@@ -38,7 +38,7 @@ Describes the recommended future CI/CD workflow:
 
 Read this after `current-workflow.md` to compare current and target workflows.
 
-### [git-workflow-cheatsheet.md](/home/hong/repos/resume/docs/git-workflow-cheatsheet.md)
+### [git-workflow-cheatsheet.md](./git-workflow-cheatsheet.md)
 
 Explains the practical difference between:
 
@@ -49,7 +49,7 @@ Explains the practical difference between:
 
 Read this when you need to resolve CI-induced remote branch movement safely.
 
-### [single-page-cv-tech-stack.md](/home/hong/repos/resume/docs/single-page-cv-tech-stack.md)
+### [single-page-cv-tech-stack.md](./single-page-cv-tech-stack.md)
 
 Summarizes the current frontend stack used by `single-page-cv/`, including:
 
@@ -61,13 +61,13 @@ Summarizes the current frontend stack used by `single-page-cv/`, including:
 
 Read this when you want to understand what web stack the current resume app is actually using.
 
-### [react-nextjs-learning-guide.md](/home/hong/repos/resume/docs/react-nextjs-learning-guide.md)
+### [react-nextjs-learning-guide.md](./react-nextjs-learning-guide.md)
 
 Provides a practical learning path for someone who already knows basic JavaScript and jQuery, but has limited real React / Next.js implementation experience.
 
 Read this when you want to start contributing code to `single-page-cv/` yourself instead of only reading the code passively.
 
-### [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
+### [rearchitecture-plan.md](./rearchitecture-plan.md)
 
 Describes the repository-level redesign:
 
@@ -79,7 +79,7 @@ Describes the repository-level redesign:
 
 Read this after the workflow documents to understand how the repository should evolve structurally.
 
-### [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+### [content-model.md](./content-model.md)
 
 Defines the future content schema for:
 
@@ -92,19 +92,19 @@ Read this when implementing the first data-driven content layer.
 
 If you want to understand why branch conflicts happen:
 
-- start with [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
+- start with [current-workflow.md](./current-workflow.md)
 
 If you want to understand how to remove CI/CD-induced branch conflicts:
 
-- read [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
+- read [future-workflow.md](./future-workflow.md)
 
 If you want to understand the full repository refactor direction:
 
-- read [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
+- read [rearchitecture-plan.md](./rearchitecture-plan.md)
 
 If you want to start implementation of the new content layer:
 
-- read [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+- read [content-model.md](./content-model.md)
 
 ## Next Recommended Implementation Steps
 

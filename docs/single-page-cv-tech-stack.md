@@ -38,7 +38,7 @@ This is a modern React-based frontend stack, not a plain static HTML page and no
 
 ## Declared Package Versions
 
-According to [package.json](/home/hong/repos/resume/single-page-cv/package.json):
+According to [`single-page-cv/package.json`](../single-page-cv/package.json):
 
 - `next`: `^15.5.10`
 - `react`: `^19.0.0`
@@ -49,7 +49,7 @@ According to [package.json](/home/hong/repos/resume/single-page-cv/package.json)
 
 ## Lockfile State
 
-According to [package-lock.json](/home/hong/repos/resume/single-page-cv/package-lock.json), the app is also intended to resolve against:
+According to [`single-page-cv/package-lock.json`](../single-page-cv/package-lock.json), the app is also intended to resolve against:
 
 - `next`: `^15.5.10`
 - `react`: `^19.0.0`
@@ -83,15 +83,15 @@ In short:
 
 The app is using the **App Router** layout under:
 
-- [layout.js](/home/hong/repos/resume/single-page-cv/src/app/layout.js)
-- [page.js](/home/hong/repos/resume/single-page-cv/src/app/page.js)
+- [`single-page-cv/src/app/layout.js`](../single-page-cv/src/app/layout.js)
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
 
 Current rendering characteristics:
 
 - route is defined under `src/app/`
 - page rendering is server-side compatible
 - current page reads JSON content from the parent repository directory:
-  - [resume.en.json](/home/hong/repos/resume/content/resume.en.json)
+  - [`content/resume.en.json`](../content/resume.en.json)
 
 This means the current web renderer is already moving toward a content-driven model.
 
@@ -99,7 +99,7 @@ This means the current web renderer is already moving toward a content-driven mo
 
 Global styling is handled through:
 
-- [globals.css](/home/hong/repos/resume/single-page-cv/src/app/globals.css)
+- [`single-page-cv/src/app/globals.css`](../single-page-cv/src/app/globals.css)
 
 Current styling characteristics:
 
@@ -114,7 +114,7 @@ So the current frontend styling approach is:
 
 ## Fonts
 
-According to [layout.js](/home/hong/repos/resume/single-page-cv/src/app/layout.js), the app uses:
+According to [`single-page-cv/src/app/layout.js`](../single-page-cv/src/app/layout.js), the app uses:
 
 - `next/font/google`
 - `Geist`
@@ -124,7 +124,7 @@ This means font loading is handled through Next.js font optimization instead of 
 
 ## Build Configuration
 
-According to [next.config.mjs](/home/hong/repos/resume/single-page-cv/next.config.mjs):
+According to [`single-page-cv/next.config.mjs`](../single-page-cv/next.config.mjs):
 
 - `output: "standalone"`
 
@@ -134,7 +134,7 @@ This indicates the app is configured to support standalone deployment packaging.
 
 Lint configuration is defined in:
 
-- [eslint.config.mjs](/home/hong/repos/resume/single-page-cv/eslint.config.mjs)
+- [`single-page-cv/eslint.config.mjs`](../single-page-cv/eslint.config.mjs)
 
 It currently uses:
 
@@ -143,7 +143,7 @@ It currently uses:
 
 ## Scripts
 
-According to [package.json](/home/hong/repos/resume/single-page-cv/package.json), available scripts are:
+According to [`single-page-cv/package.json`](../single-page-cv/package.json), available scripts are:
 
 - `npm run dev`
 - `npm run build`
@@ -206,6 +206,6 @@ Answer:
 
 ## Related Documents
 
-- [index.md](/home/hong/repos/resume/docs/index.md)
-- [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-- [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+- [index.md](./index.md)
+- [rearchitecture-plan.md](./rearchitecture-plan.md)
+- [content-model.md](./content-model.md)

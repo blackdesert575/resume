@@ -281,7 +281,7 @@ That single change is the main workflow improvement needed to eliminate the curr
 
 ## Related Documents
 
-- [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
-- [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-- [content-model.md](/home/hong/repos/resume/docs/content-model.md)
-- [index.md](/home/hong/repos/resume/docs/index.md)
+- [current-workflow.md](./current-workflow.md)
+- [rearchitecture-plan.md](./rearchitecture-plan.md)
+- [content-model.md](./content-model.md)
+- [index.md](./index.md)

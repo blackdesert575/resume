@@ -86,7 +86,7 @@ You need to understand:
 
 Examples in this repository:
 
-- [page.js](/home/hong/repos/resume/single-page-cv/src/app/page.js)
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
 
 ### 3. React Components
 
@@ -149,11 +149,11 @@ This repository is actually a good learning playground because it already separa
 
 You can learn from these files:
 
-- [resume.en.json](/home/hong/repos/resume/content/resume.en.json)
-- [resume.zh.json](/home/hong/repos/resume/content/resume.zh.json)
-- [page.js](/home/hong/repos/resume/single-page-cv/src/app/page.js)
-- [layout.js](/home/hong/repos/resume/single-page-cv/src/app/layout.js)
-- [globals.css](/home/hong/repos/resume/single-page-cv/src/app/globals.css)
+- [`content/resume.en.json`](../content/resume.en.json)
+- [`content/resume.zh.json`](../content/resume.zh.json)
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+- [`single-page-cv/src/app/layout.js`](../single-page-cv/src/app/layout.js)
+- [`single-page-cv/src/app/globals.css`](../single-page-cv/src/app/globals.css)
 
 This means:
 
@@ -173,7 +173,7 @@ Goal:
 
 What to do:
 
-1. open [resume.en.json](/home/hong/repos/resume/content/resume.en.json)
+1. open [`content/resume.en.json`](../content/resume.en.json)
 2. change:
    - `summary`
    - one skill item
@@ -200,7 +200,7 @@ Goal:
 
 What to do:
 
-1. open [page.js](/home/hong/repos/resume/single-page-cv/src/app/page.js)
+1. open [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
 2. identify:
    - `ResumePage`
    - `Section`
@@ -224,7 +224,7 @@ Goal:
 
 What to do:
 
-1. open [globals.css](/home/hong/repos/resume/single-page-cv/src/app/globals.css)
+1. open [`single-page-cv/src/app/globals.css`](../single-page-cv/src/app/globals.css)
 2. change:
    - font size
    - spacing
@@ -358,13 +358,190 @@ Also recommended:
 
 If you want concrete tasks to start with, do these in order:
 
-1. change the order of sections in [page.js](/home/hong/repos/resume/single-page-cv/src/app/page.js)
+1. change the order of sections in [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
 2. add a new contact field from `basics`
 3. change skills display from tags back to plain text, then change it again
 4. render `resume.zh.json` instead of `resume.en.json`
 5. add a simple language toggle
 
 These tasks are small enough to finish and valuable enough to teach you real React / Next.js usage.
+
+## Seven Practice Tasks In This Repo
+
+Below is a more structured 7-task practice path using this repository as the learning material.
+
+Each task is intentionally small and builds on the previous one.
+
+### Task 1: Change Content Only
+
+Goal:
+
+- understand that UI is driven by data
+
+Files:
+
+- [`content/resume.en.json`](../content/resume.en.json)
+
+What to do:
+
+1. edit `summary`
+2. change one `skills` item
+3. change one project description
+
+What you learn:
+
+- how content changes flow into the page
+- that React is rendering from JSON, not hardcoded HTML
+
+### Task 2: Reorder Existing Sections
+
+Goal:
+
+- understand JSX structure inside the page component
+
+Files:
+
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+
+What to do:
+
+1. move `Projects` above `Experience`
+2. move `Links` higher or lower in the side column
+
+What you learn:
+
+- how React layout is composed
+- how JSX order affects page structure
+
+### Task 3: Rename Section Labels
+
+Goal:
+
+- get comfortable editing components and props
+
+Files:
+
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+
+What to do:
+
+1. rename `Experience` to `Work Experience`
+2. rename `Links` to `Profiles`
+3. rename `Projects` to `Selected Projects`
+
+What you learn:
+
+- how props are passed into reusable UI blocks
+- how the `Section` component works
+
+### Task 4: Add One New Field To The Header
+
+Goal:
+
+- learn how to connect new JSON fields to rendered UI
+
+Files:
+
+- [`content/resume.en.json`](../content/resume.en.json)
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+
+What to do:
+
+1. add `website` to `basics` if you want
+2. render it in the contact area
+3. only show it if the field exists
+
+What you learn:
+
+- conditional rendering
+- data access from nested objects
+
+### Task 5: Change Skills Presentation
+
+Goal:
+
+- practice changing how data is displayed without changing the data model
+
+Files:
+
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+- [`single-page-cv/src/app/globals.css`](../single-page-cv/src/app/globals.css)
+
+What to do:
+
+1. turn skill tags into a simple comma-separated paragraph
+2. then turn them back into tags
+3. compare which style feels better
+
+What you learn:
+
+- how UI presentation is separate from content data
+- how JSX and CSS work together
+
+### Task 6: Render Chinese Content
+
+Goal:
+
+- understand content switching and file-based data loading
+
+Files:
+
+- [`content/resume.zh.json`](../content/resume.zh.json)
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+
+What to do:
+
+1. temporarily change the page to load `resume.zh.json`
+2. run the page and confirm the Chinese content renders
+
+What you learn:
+
+- how the current page loads content
+- how a renderer can switch between different data sources
+
+### Task 7: Add A Simple EN / ZH Toggle
+
+Goal:
+
+- implement your first small real feature in Next.js
+
+Files:
+
+- [`single-page-cv/src/app/page.js`](../single-page-cv/src/app/page.js)
+
+Suggested implementation options:
+
+1. use a query string like `?lang=en` or `?lang=zh`
+2. or use two simple routes later
+
+What to do:
+
+1. read `lang`
+2. decide which JSON file to load
+3. show a small language switch link at the top
+
+What you learn:
+
+- branching logic
+- request-aware rendering
+- small but practical product thinking
+
+## How To Work Through These Tasks
+
+Recommended workflow for each task:
+
+1. make one small code change
+2. run or refresh:
+
+```bash
+cd single-page-cv
+npm run dev
+```
+
+3. check the result in the browser
+4. if it works, make a small commit
+
+This is the right pace for learning React and Next.js in a real repository.
 
 ## When To Learn Hooks
 
@@ -389,13 +566,13 @@ Only after that should you explore more advanced hooks.
 
 A realistic short-term goal is:
 
-**be able to independently modify `single-page-cv/src/app/page.js` and `globals.css` without fear**
+**be able to independently modify `single-page-cv/src/app/page.js` and `single-page-cv/src/app/globals.css` without fear**
 
 That is already enough to make meaningful contributions to this project.
 
 ## Related Documents
 
-- [index.md](/home/hong/repos/resume/docs/index.md)
-- [single-page-cv-tech-stack.md](/home/hong/repos/resume/docs/single-page-cv-tech-stack.md)
-- [content-model.md](/home/hong/repos/resume/docs/content-model.md)
-- [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
+- [index.md](./index.md)
+- [single-page-cv-tech-stack.md](./single-page-cv-tech-stack.md)
+- [content-model.md](./content-model.md)
+- [rearchitecture-plan.md](./rearchitecture-plan.md)

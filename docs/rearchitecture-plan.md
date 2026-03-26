@@ -357,7 +357,7 @@ The rearchitecture is successful when:
 
 ## Related Documents
 
-- [index.md](/home/hong/repos/resume/docs/index.md)
-- [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
-- [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
-- [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+- [index.md](./index.md)
+- [current-workflow.md](./current-workflow.md)
+- [future-workflow.md](./future-workflow.md)
+- [content-model.md](./content-model.md)

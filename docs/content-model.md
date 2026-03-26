@@ -470,7 +470,7 @@ After this document, the next implementation step should be:
 
 ## Related Documents
 
-- [index.md](/home/hong/repos/resume/docs/index.md)
-- [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-- [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
-- [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
+- [index.md](./index.md)
+- [rearchitecture-plan.md](./rearchitecture-plan.md)
+- [current-workflow.md](./current-workflow.md)
+- [future-workflow.md](./future-workflow.md)

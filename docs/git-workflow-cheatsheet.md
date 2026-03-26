@@ -176,6 +176,6 @@ This is exactly why `git fetch` is the safest first step in this repository befo
 
 ## Related Documents
 
-- [index.md](/home/hong/repos/resume/docs/index.md)
-- [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
-- [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
+- [index.md](./index.md)
+- [current-workflow.md](./current-workflow.md)
+- [future-workflow.md](./future-workflow.md)

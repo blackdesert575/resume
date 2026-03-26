@@ -142,7 +142,7 @@ Target direction:
 
 That direction is described in:
 
-- [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-- [content-model.md](/home/hong/repos/resume/docs/content-model.md)
-- [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
-- [index.md](/home/hong/repos/resume/docs/index.md)
+- [rearchitecture-plan.md](./rearchitecture-plan.md)
+- [content-model.md](./content-model.md)
+- [future-workflow.md](./future-workflow.md)
+- [index.md](./index.md)
