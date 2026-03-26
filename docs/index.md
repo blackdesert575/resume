@@ -11,8 +11,9 @@ Recommended reading order:
 3. [git-workflow-cheatsheet.md](./git-workflow-cheatsheet.md)
 4. [single-page-cv-tech-stack.md](./single-page-cv-tech-stack.md)
 5. [react-nextjs-learning-guide.md](./react-nextjs-learning-guide.md)
-6. [rearchitecture-plan.md](./rearchitecture-plan.md)
-7. [content-model.md](./content-model.md)
+6. [single-page-cv-linux-vm-workflow.md](./single-page-cv-linux-vm-workflow.md)
+7. [rearchitecture-plan.md](./rearchitecture-plan.md)
+8. [content-model.md](./content-model.md)
 
 ## Documents
 
@@ -66,6 +67,12 @@ Read this when you want to understand what web stack the current resume app is a
 Provides a practical learning path for someone who already knows basic JavaScript and jQuery, but has limited real React / Next.js implementation experience.
 
 Read this when you want to start contributing code to `single-page-cv/` yourself instead of only reading the code passively.
+
+### [single-page-cv-linux-vm-workflow.md](./single-page-cv-linux-vm-workflow.md)
+
+Provides the shortest practical workflow for running and testing `single-page-cv/` on a local Linux machine or Linux VM.
+
+Read this when you want the minimum set of commands to install dependencies, start the dev server, and verify production build behavior.
 
 ### [rearchitecture-plan.md](./rearchitecture-plan.md)
 

@@ -48,6 +48,30 @@ a {
   padding: 30px 34px 36px;
 }
 
+.locale-switcher {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.locale-link {
+  color: var(--muted);
+}
+
+.locale-link.active {
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+.locale-divider {
+  color: var(--muted);
+}
+
 .hero {
   display: grid;
   gap: 14px;
@@ -214,6 +238,10 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+
+  .locale-switcher {
+    justify-content: flex-start;
   }
 }
 

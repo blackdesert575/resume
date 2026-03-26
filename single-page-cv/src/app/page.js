@@ -1,11 +1,35 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-async function getResumeContent() {
-  const resumePath = path.join(process.cwd(), "..", "content", "resume.en.json");
+async function getResumeContent(locale) {
+  const fileName = locale === "zh" ? "resume.zh.json" : "resume.en.json";
+  const resumePath = path.join(process.cwd(), "..", "content", fileName);
   const content = await readFile(resumePath, "utf8");
   return JSON.parse(content);
 }
+
+const UI_COPY = {
+  en: {
+    experience: "Experience",
+    projects: "Projects",
+    skills: "Skills",
+    education: "Education",
+    certifications: "Certifications",
+    links: "Links",
+    downloadPdf: "Download PDF",
+    github: "GitHub",
+  },
+  zh: {
+    experience: "工作經驗",
+    projects: "專案",
+    skills: "技能",
+    education: "學歷",
+    certifications: "專業認證",
+    links: "連結",
+    downloadPdf: "下載 PDF",
+    github: "GitHub",
+  },
+};
 
 function formatDate(value) {
   if (value === "present") {
@@ -35,14 +59,32 @@ function Section({ title, children }) {
   );
 }
 
-export default async function ResumePage() {
-  const resume = await getResumeContent();
+export default async function ResumePage({ searchParams }) {
+  const params = await searchParams;
+  const locale = params?.lang === "zh" ? "zh" : "en";
+  const resume = await getResumeContent(locale);
+  const copy = UI_COPY[locale];
   const { basics, summary, skills, experience, projects, education, certifications, links } =
     resume;
 
   return (
     <main className="resume-shell">
       <div className="resume-frame">
+        <div className="locale-switcher" aria-label="Language switcher">
+          <a
+            href="/?lang=en"
+            className={locale === "en" ? "locale-link active" : "locale-link"}
+          >
+            EN
+          </a>
+          <span className="locale-divider">/</span>
+          <a
+            href="/?lang=zh"
+            className={locale === "zh" ? "locale-link active" : "locale-link"}
+          >
+            ZH
+          </a>
+        </div>
         <header className="hero">
           <div className="hero-main">
             <h1>{basics.name}</h1>
@@ -52,18 +94,18 @@ export default async function ResumePage() {
           <div className="contact-strip">
             <a href={`mailto:${basics.email}`}>{basics.email}</a>
             <a href={basics.github} target="_blank" rel="noreferrer">
-              GitHub
+              {copy.github}
             </a>
             <p>{basics.location}</p>
             <a href="/yh_resume.pdf" target="_blank" rel="noreferrer">
-              Download PDF
+              {copy.downloadPdf}
             </a>
           </div>
         </header>
 
         <div className="resume-grid">
           <div className="resume-main">
-            <Section title="Experience">
+            <Section title={copy.experience}>
               <div className="stack">
                 {experience.map((job) => (
                   <article key={`${job.company}-${job.start}`} className="card">
@@ -95,7 +137,7 @@ export default async function ResumePage() {
               </div>
             </Section>
 
-            <Section title="Projects">
+            <Section title={copy.projects}>
               <div className="stack">
                 {projects.map((project) => (
                   <article key={project.name} className="card">
@@ -131,7 +173,7 @@ export default async function ResumePage() {
           </div>
 
           <aside className="resume-side">
-            <Section title="Skills">
+            <Section title={copy.skills}>
               <div className="stack">
                 {skills.map((group) => (
                   <article key={group.category} className="card compact">
@@ -148,7 +190,7 @@ export default async function ResumePage() {
               </div>
             </Section>
 
-            <Section title="Education">
+            <Section title={copy.education}>
               <div className="stack">
                 {education.map((item) => (
                   <article key={`${item.school}-${item.start}`} className="card compact">
@@ -162,7 +204,7 @@ export default async function ResumePage() {
               </div>
             </Section>
 
-            <Section title="Certifications">
+            <Section title={copy.certifications}>
               <div className="stack">
                 {certifications.map((item) => (
                   <article key={item.name} className="card compact">
@@ -173,7 +215,7 @@ export default async function ResumePage() {
               </div>
             </Section>
 
-            <Section title="Links">
+            <Section title={copy.links}>
               <div className="stack">
                 {links.map((item) => (
                   <article key={item.url} className="card compact">
