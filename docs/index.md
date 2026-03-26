@@ -10,8 +10,9 @@ Recommended reading order:
 2. [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
 3. [git-workflow-cheatsheet.md](/home/hong/repos/resume/docs/git-workflow-cheatsheet.md)
 4. [single-page-cv-tech-stack.md](/home/hong/repos/resume/docs/single-page-cv-tech-stack.md)
-5. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-6. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+5. [react-nextjs-learning-guide.md](/home/hong/repos/resume/docs/react-nextjs-learning-guide.md)
+6. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
+7. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
 
 ## Documents
 
@@ -59,6 +60,12 @@ Summarizes the current frontend stack used by `single-page-cv/`, including:
 - current content-loading direction
 
 Read this when you want to understand what web stack the current resume app is actually using.
+
+### [react-nextjs-learning-guide.md](/home/hong/repos/resume/docs/react-nextjs-learning-guide.md)
+
+Provides a practical learning path for someone who already knows basic JavaScript and jQuery, but has limited real React / Next.js implementation experience.
+
+Read this when you want to start contributing code to `single-page-cv/` yourself instead of only reading the code passively.
 
 ### [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
 
