@@ -1,5 +1,3 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import ExperienceSection from "../components/resume/ExperienceSection";
 import ProjectsSection from "../components/resume/ProjectsSection";
 import ResumeHeader from "../components/resume/ResumeHeader";
@@ -9,42 +7,25 @@ import {
   LinksSection,
   SkillsSection,
 } from "../components/resume/SidebarSections";
+import { getResumeContent } from "../lib/resume-content";
+import { getLocale, UI_COPY } from "../lib/ui-copy";
 
-async function getResumeContent(locale) {
-  const fileName = locale === "zh" ? "resume.zh.json" : "resume.en.json";
-  const resumePath = path.join(process.cwd(), "..", "content", fileName);
-  const content = await readFile(resumePath, "utf8");
-  return JSON.parse(content);
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams;
+  const locale = getLocale(params);
+  const copy = UI_COPY[locale];
+  const resume = await getResumeContent(locale);
+  const { basics, summary } = resume;
+
+  return {
+    title: `${basics.name} | ${copy.metadataTitle}`,
+    description: summary || copy.metadataDescription,
+  };
 }
-
-const UI_COPY = {
-  en: {
-    experience: "Experience",
-    projects: "Projects",
-    skills: "Skills",
-    education: "Education",
-    certifications: "Certifications",
-    links: "Links",
-    downloadPdf: "Download PDF",
-    github: "GitHub",
-    repository: "Repository",
-  },
-  zh: {
-    experience: "工作經驗",
-    projects: "專案",
-    skills: "技能",
-    education: "學歷",
-    certifications: "專業認證",
-    links: "連結",
-    downloadPdf: "下載 PDF",
-    github: "GitHub",
-    repository: "原始碼",
-  },
-};
 
 export default async function ResumePage({ searchParams }) {
   const params = await searchParams;
-  const locale = params?.lang === "zh" ? "zh" : "en";
+  const locale = getLocale(params);
   const resume = await getResumeContent(locale);
   const copy = UI_COPY[locale];
   const { basics, summary, skills, experience, projects, education, certifications, links } =

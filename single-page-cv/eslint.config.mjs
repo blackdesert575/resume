@@ -1,14 +1,42 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
+import globals from "globals";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const nextRules = {
+  ...nextPlugin.configs.recommended.rules,
+  ...nextPlugin.configs["core-web-vitals"].rules,
+  "no-unused-vars": [
+    "error",
+    {
+      varsIgnorePattern: "^[A-Z_]",
+      argsIgnorePattern: "^_",
+    },
+  ],
+};
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
-
-export default eslintConfig;
+export default [
+  {
+    ignores: [".next/**", "node_modules/**", "out/**", "dist/**"],
+  },
+  js.configs.recommended,
+  {
+    files: ["**/*.{js,mjs,cjs,jsx}"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    plugins: {
+      "@next/next": nextPlugin,
+    },
+    rules: nextRules,
+  },
+];

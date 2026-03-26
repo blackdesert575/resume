@@ -1,21 +1,5 @@
 import Section from "./Section";
-
-function formatDate(value) {
-  if (value === "present") {
-    return "Present";
-  }
-
-  const [year, month] = value.split("-");
-  if (!year || !month) {
-    return value;
-  }
-
-  return new Intl.DateTimeFormat("en", {
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${year}-${month}-01T00:00:00Z`));
-}
+import { formatResumeMonth } from "../../lib/resume-content";
 
 export default function ExperienceSection({ title, experience }) {
   return (
@@ -29,7 +13,7 @@ export default function ExperienceSection({ title, experience }) {
                 <p className="org-line">{job.company}</p>
               </div>
               <p className="date-range">
-                {formatDate(job.start)} - {formatDate(job.end)}
+                {formatResumeMonth(job.start)} - {formatResumeMonth(job.end)}
               </p>
             </div>
             <ul>

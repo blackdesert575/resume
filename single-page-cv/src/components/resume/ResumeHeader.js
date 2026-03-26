@@ -1,16 +1,19 @@
+import Link from "next/link";
+import { getResumePdfHref } from "../../lib/resume-content";
+
 export default function ResumeHeader({ basics, summary, copy, locale }) {
-  const pdfHref = locale === "zh" ? "/yh_resume_cht.pdf" : "/yh_resume.pdf";
+  const pdfHref = getResumePdfHref(locale);
 
   return (
     <>
       <div className="locale-switcher" aria-label="Language switcher">
-        <a href="/?lang=en" className={locale === "en" ? "locale-link active" : "locale-link"}>
+        <Link href="/?lang=en" className={locale === "en" ? "locale-link active" : "locale-link"}>
           EN
-        </a>
+        </Link>
         <span className="locale-divider">/</span>
-        <a href="/?lang=zh" className={locale === "zh" ? "locale-link active" : "locale-link"}>
+        <Link href="/?lang=zh" className={locale === "zh" ? "locale-link active" : "locale-link"}>
           ZH
-        </a>
+        </Link>
       </div>
       <header className="hero">
         <div className="hero-main">

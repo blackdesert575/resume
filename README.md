@@ -19,8 +19,12 @@ Recent changes:
   - `content/resume.zh.json`
 - added jq-based content validation:
   - `bash scripts/validate_content_json.sh`
+- added Node.js-based content validation inside `single-page-cv/`:
+  - `cd single-page-cv && npm run validate:content`
 - updated `single-page-cv/` to render JSON content instead of only embedding PDF
 - added simple `EN / ZH` query-string switching in `single-page-cv/`
+- improved `single-page-cv/` structure by splitting the resume page into smaller components and moving content helpers into `src/lib/`
+- fixed `single-page-cv` lint so both `npm run lint` and `npm run build` now work
 - added local Linux VM helper scripts for `single-page-cv/`
 - expanded `docs/` so the repository architecture and workflow are documented inside the repo
 
@@ -61,6 +65,21 @@ http://localhost:3000
 ```
 
 If port `3000` is already in use, Next.js may automatically switch to another port such as `3001`.
+
+### validate structured content from single-page-cv
+
+```shell
+cd single-page-cv
+npm run validate:content
+```
+
+### lint and build single-page-cv
+
+```shell
+cd single-page-cv
+npm run lint
+npm run build
+```
 
 ### production-style build check for single-page-cv
 
