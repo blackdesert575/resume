@@ -9,8 +9,9 @@ Recommended reading order:
 1. [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
 2. [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
 3. [git-workflow-cheatsheet.md](/home/hong/repos/resume/docs/git-workflow-cheatsheet.md)
-4. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-5. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+4. [single-page-cv-tech-stack.md](/home/hong/repos/resume/docs/single-page-cv-tech-stack.md)
+5. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
+6. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
 
 ## Documents
 
@@ -46,6 +47,18 @@ Explains the practical difference between:
 - `git rebase`
 
 Read this when you need to resolve CI-induced remote branch movement safely.
+
+### [single-page-cv-tech-stack.md](/home/hong/repos/resume/docs/single-page-cv-tech-stack.md)
+
+Summarizes the current frontend stack used by `single-page-cv/`, including:
+
+- Next.js and React versions
+- App Router structure
+- styling approach
+- build and lint status
+- current content-loading direction
+
+Read this when you want to understand what web stack the current resume app is actually using.
 
 ### [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
 
