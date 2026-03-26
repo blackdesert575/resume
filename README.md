@@ -103,6 +103,14 @@ Use the docs like this:
 
 ## older setup notes
 
+This section keeps older LaTeX / PDF / html conversion notes for reference.
+
+Use this section when you are working on:
+
+- the legacy LaTeX-first workflow
+- pdf2htmlEX conversion
+- older deployment or container-based flows
+
 ### latex / pdf workflow
 
 ```shell
@@ -116,11 +124,13 @@ or:
 bash scripts/make_pdf.sh
 ```
 
-* requirement packages
-  * texlive-full
-    * [tug.org/texlive](https://tug.org/texlive/)
-    * [TeX Live - Quick install for Unix](https://www.tug.org/texlive/quickinstall.html)
-    * install via package manager
+### requirement packages
+
+#### texlive-full
+
+- [tug.org/texlive](https://tug.org/texlive/)
+- [TeX Live - Quick install for Unix](https://www.tug.org/texlive/quickinstall.html)
+- install via package manager
 
 ```shell
 # Debian / Ubuntu
@@ -135,15 +145,15 @@ brew install mactex
 sudo tlmgr update --self
 ```
 
-  * pdf2htmlEX
-    * [github.com/pdf2htmlEX/pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX)
-    * [Building#building-yourself](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Building#building-yourself)
-    * [Download-Debian-Archive](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Debian-Archive)
-    * [Download-Docker-Image](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Docker-Image)
-    * [github.com/pdf2htmlEX/pdf2htmlEX/wiki/Quick-Start](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Quick-Start)
+#### pdf2htmlEX
 
-* docker, docker compose, podman, podman compose
-  * if you want to build resume in a container with docker/podman compose
+- [github.com/pdf2htmlEX/pdf2htmlEX](https://github.com/pdf2htmlEX/pdf2htmlEX)
+- [Building#building-yourself](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Building#building-yourself)
+- [Download-Debian-Archive](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Debian-Archive)
+- [Download-Docker-Image](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Docker-Image)
+- [github.com/pdf2htmlEX/pdf2htmlEX/wiki/Quick-Start](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Quick-Start)
+
+### container-based build
 
 ```shell
 git clone https://github.com/blackdesert575/resume.git
@@ -155,17 +165,18 @@ cd /resume
 ./scripts/pipelines_ci.sh
 ```
 
-* Deployments:
-  * Deploy to Cloudflare Pages with Github actions CI/CD pipelins
-    * CI will auto triger wih git push event but can skipped.
-      * GitHub Action
-        * [github.com/marketplace/actions/github-action-for-latex](https://github.com/marketplace/actions/github-action-for-latex)
-        * [github.com/marketplace/actions/pdf2htmlex-action](https://github.com/marketplace/actions/pdf2htmlex-action)
-        * [github.com/marketplace/actions/add-commit](https://github.com/marketplace/actions/add-commit)
-        * [docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container](docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container)
-        * [docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container](https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container)
-    * CD
-      * [developers.cloudflare.com/pages/get-started/git-integration](https://developers.cloudflare.com/pages/get-started/git-integration/)
+### deployment notes
+
+#### Cloudflare Pages with GitHub Actions CI/CD
+
+- CI is triggered by Git push unless explicitly skipped
+- related GitHub Actions references:
+  - [github.com/marketplace/actions/github-action-for-latex](https://github.com/marketplace/actions/github-action-for-latex)
+  - [github.com/marketplace/actions/pdf2htmlex-action](https://github.com/marketplace/actions/pdf2htmlex-action)
+  - [github.com/marketplace/actions/add-commit](https://github.com/marketplace/actions/add-commit)
+  - [docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container](https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/run-jobs-in-a-container#mounting-volumes-in-a-container)
+- Cloudflare Pages Git integration:
+  - [developers.cloudflare.com/pages/get-started/git-integration](https://developers.cloudflare.com/pages/get-started/git-integration/)
 
     
 ```shell
@@ -178,41 +189,35 @@ cd /resume
 [skip actions] update docs
 ```
 
-  * Any Linux host with Nginx + pdf2htmlex bundled page output(html/css/javascript all in one)
-    * Install the CLI prerequisites on your localhost
-    * Git clone this repo on your localhost
-    * manual edit src/*.tex
-    * generate *.pdf from *.tex
-    * generate *.html from *.pdf
-    * deploy with docker images  
+#### Any Linux host with Nginx + pdf2htmlEX bundled page output
 
 ```shell
-#clone repo to your work dir
+# clone repo to your work dir
 git clone git@github.com:blackdesert575/resume.git
 
 cd resume
 
-#edit *.tex
+# edit *.tex
 vim src/yh_resume.tex
 
-#output and packge output/** to docker image and run a docker container at localhost
+# output and package output/** to docker image and run a docker container at localhost
 bash scripts/pipelines.sh
 
-#test robots
+# test robots
 uv run test_robots.py
 
-#or
+# or
 python3 test_robots.py
 ```
 
-  * node.js + react.js single-page-cv app with pdf output
-    * Install the CLI prerequisites on your localhost
-    * Git clone this repo on your localhost
-    * manual edit src/*.tex
-    * generate *.pdf from *.tex
-    * mv *.pdf to single-page-cv/public
-    * devops under single-page-cv with next dev server
-    * deploy with docker images
+#### Older single-page-cv notes
+
+- Install the CLI prerequisites on your localhost
+- Git clone this repo on your localhost
+- manually edit `src/*.tex`
+- generate `*.pdf` from `*.tex`
+- move PDF output to `single-page-cv/public` in the older workflow
+- run the Next.js app under `single-page-cv/`
 
 ## to do list
 
@@ -233,20 +238,22 @@ python3 test_robots.py
 
 ## development notes
 
-* [Python: Usage with uv](https://docs.astral.sh/uv/)
-* [how-to-extract-text-from-a-pdf-file](https://stackoverflow.com/questions/34837707/how-to-extract-text-from-a-pdf-file)
-* [pypdf](https://github.com/py-pdf/pypdf)
+### references
 
-* parser with Python
+- [Python: Usage with uv](https://docs.astral.sh/uv/)
+- [how-to-extract-text-from-a-pdf-file](https://stackoverflow.com/questions/34837707/how-to-extract-text-from-a-pdf-file)
+- [pypdf](https://github.com/py-pdf/pypdf)
+
+### parser with Python
 
 ```shell
 uv add pypdf
 ```
 
-* build *.tex to output pdf with latexmk
+### build *.tex to output pdf with latexmk
 
 ```shell
-#check latexmk installed or not
+# check latexmk installed or not
 which latexmk
 latexmk --version
 
@@ -254,36 +261,38 @@ cd src/
 # latexmk yh_resume.tex
 
 latexmk -xelatex -interaction=nonstopmode yh_resume_cht.tex
-#clean build uneeded files and keep *.pdf
+# clean build unneeded files and keep *.pdf
 latexmk -c
 ```
 
-* build *.tex to output html with htlatex
+### build *.tex to output html with htlatex
 
 ```shell
 htlatex file.tex "xhtml,html5,mathml,charset=utf-8" " -cunihtf -utf8"
 ```
 
-* build *.tex to output pdf with make
+### build *.tex to output pdf with make
 
 ```shell
-#build pdf from tex source codes
+# build pdf from tex source codes
 make all
-#rm extra files when bulding tex project
+# remove extra files when building tex project
 make clean
 ```
 
-* Or building with vscode extensions
-    * LaTeX Workshop
+### building with VS Code
 
-* generate *.html from *.pdf
-* [How to use this docker container to convert pdf file to html](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Docker-Image#how-to-use-this-docker-container-to-convert-pdf-file-to-html)
+- LaTeX Workshop
+
+### generate *.html from *.pdf
+
+- [How to use this docker container to convert pdf file to html](https://github.com/pdf2htmlEX/pdf2htmlEX/wiki/Download-Docker-Image#how-to-use-this-docker-container-to-convert-pdf-file-to-html)
 
 ```shell
-#with docker
+# with docker
 docker run -ti --rm -v ./src:/pdf -w /pdf pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-alpine-3.12.0-x86_64 --zoom 1.3 yh_resume.pdf
 
-#with podman
+# with podman
 podman run -ti --rm -v ./src:/pdf -w /pdf docker.io/pdf2htmlex/pdf2htmlex:0.18.8.rc2-master-20200820-alpine-3.12.0-x86_64 --zoom 1.3 yh_resume.pdf
 
 # Internal Error: Your version of iconv does not support the "Mac Roman" encoding.
@@ -291,17 +300,17 @@ podman run -ti --rm -v ./src:/pdf -w /pdf docker.io/pdf2htmlex/pdf2htmlex:0.18.8
 # Preprocessing: 2/2
 # Working: 2/2
 
-#add this for My github pages icon
+# add this for My github pages icon
 <link rel="icon" type="image/x-icon" href="./favicon.ico">
 <link rel="icon" type="image/x-icon" href="../images/ico/favicon.ico">
 
-#edit *.tex with vscode and extension:LaTeX Workshop
+# edit *.tex with vscode and extension: LaTeX Workshop
 vscode yh_resume.tex
 vscode yh_resume.pdf
 
-#build with bash shell scripts
+# build with bash shell scripts
 bash ./scripts/build.sh
 
-#run with bash shell scripts
+# run with bash shell scripts
 bash ./scripts/start.sh
 ```
