@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "locale": "en",
+    "version": "0.1.0",
+    "updatedAt": "2026-03-26",
+    "pdfFileName": "yh_resume.pdf",
+    "slug": "resume"
+  },
+  "basics": {
+    "name": "Joe (Yung-Hung) Huang",
+    "title": "System / DevOps Engineer",
+    "email": "yunghunghuang984@gmail.com",
+    "location": "Taipei, Taiwan",
+    "github": "https://github.com/blackdesert575"
+  },
+  "summary": "System / DevOps / SRE engineer with experience across Linux operations, cloud and on-premise infrastructure, Kubernetes, CI/CD, observability, and infrastructure automation.",
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Mandarin (native)",
+        "English (professional working proficiency)"
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "items": [
+        "Python (proficient)",
+        "Bash (competence)",
+        "SQL (competence)",
+        "Rust (competence)",
+        "Golang (beginner)"
+      ]
+    },
+    {
+      "category": "Version Control",
+      "items": [
+        "Git"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        "Django",
+        "FastAPI",
+        "Selenium",
+        "pandas",
+        "SQLAlchemy"
+      ]
+    },
+    {
+      "category": "Operating Systems",
+      "items": [
+        "Linux (proficient)",
+        "macOS (competence)",
+        "Windows (beginner)"
+      ]
+    },
+    {
+      "category": "CI/CD",
+      "items": [
+        "GitLab Runner",
+        "GitHub Actions",
+        "Jenkins",
+        "Tekton Pipelines",
+        "Argo CD"
+      ]
+    },
+    {
+      "category": "Streaming & Messaging",
+      "items": [
+        "Apache RocketMQ",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "category": "Scheduling & Orchestration",
+      "items": [
+        "Kubernetes (EKS, GKE, ACK, k0s, k3s)"
+      ]
+    },
+    {
+      "category": "Kubernetes Subsystems",
+      "items": [
+        "ingress-nginx",
+        "cert-manager",
+        "ECK operator",
+        "KEDA",
+        "Istio"
+      ]
+    },
+    {
+      "category": "Service Proxy",
+      "items": [
+        "NGINX",
+        "HAProxy",
+        "MetalLB",
+        "Envoy"
+      ]
+    },
+    {
+      "category": "Coordination & Service Discovery",
+      "items": [
+        "Apache Zookeeper",
+        "Nacos",
+        "Consul"
+      ]
+    },
+    {
+      "category": "Container Registry",
+      "items": [
+        "Harbor"
+      ]
+    },
+    {
+      "category": "Automation & Configuration",
+      "items": [
+        "Ansible",
+        "Atlantis",
+        "Terraform",
+        "Terragrunt",
+        "Pulumi"
+      ]
+    },
+    {
+      "category": "Cloud Providers",
+      "items": [
+        "AWS",
+        "Google Cloud",
+        "Alibaba Cloud",
+        "Cloudflare"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Logic Solutions Inc.",
+      "role": "System / DevOps Engineer",
+      "start": "2025-06",
+      "end": "present",
+      "highlights": [
+        "Worked in a Linux terminal environment.",
+        "Built and maintained a Rocky Linux based Amazon Machine Image for EC2 using Packer.",
+        "Maintained AWS and on-premise infrastructure within the Taiwan engineering team using Git-based infrastructure as code workflows with Terraform, Terragrunt, and Atlantis.",
+        "Assisted in reviewing and validating existing technical documentation and infrastructure processes, identifying inconsistencies across regions.",
+        "Maintained system initialization automation with Ansible for Linux configuration, Java runtime, Nginx, RabbitMQ, and NFS setup.",
+        "Built and maintained Jenkins CI/CD pipelines using Groovy scripts for Taiwan engineering workflows.",
+        "Managed bastion host and internal asset tracking services based on Consul and Golang services, integrating EC2 metadata into centralized access control.",
+        "Analyzed system resource utilization and performance metrics through Prometheus and Grafana to identify infrastructure bottlenecks and propose optimization solutions.",
+        "Maintained the observability stack built around Prometheus, Grafana, and Consul."
+      ],
+      "technologies": [
+        "Linux",
+        "AWS",
+        "Packer",
+        "Terraform",
+        "Terragrunt",
+        "Atlantis",
+        "Ansible",
+        "Jenkins",
+        "Groovy",
+        "Prometheus",
+        "Grafana",
+        "Consul",
+        "Golang"
+      ]
+    },
+    {
+      "company": "Mending Technology CO., LTD.",
+      "role": "System / Site Reliability Engineering (SRE) / DevOps Engineering",
+      "start": "2023-11",
+      "end": "2024-12",
+      "highlights": [
+        "Worked in a Linux terminal environment.",
+        "Participated in on-call rotations about one week per month and troubleshot production issues with team members.",
+        "Supported a cryptocurrency exchange platform on AWS and on-premise infrastructure.",
+        "Administered Kubernetes clusters on AWS and on-premise environments.",
+        "Managed AWS and Cloudflare infrastructure with Pulumi and Ansible.",
+        "Administered CI/CD pipelines with GitLab CI and Jenkins."
+      ],
+      "technologies": [
+        "Linux",
+        "AWS",
+        "Cloudflare",
+        "Kubernetes",
+        "Pulumi",
+        "Ansible",
+        "GitLab CI",
+        "Jenkins"
+      ]
+    },
+    {
+      "company": "CloudRock Technology Co., Ltd",
+      "role": "Site Reliability Engineering (SRE) / DevOps / Cloud Engineering",
+      "start": "2021-11",
+      "end": "2023-04",
+      "highlights": [
+        "Worked in a Linux terminal environment.",
+        "Participated in on-call rotations and troubleshooting with team members.",
+        "Developed a Python automation project for web monitoring.",
+        "Developed a streaming platform project based on GCP GKE and Aliyun ACK.",
+        "Managed cloud infrastructure across AWS, GCP, Aliyun, and Cloudflare with JumpServer.",
+        "Administered Kubernetes clusters on AWS EKS, GCP GKE, and Aliyun ACK.",
+        "Administered CI/CD pipelines with GitLab CI, Jenkins, and Tekton."
+      ],
+      "technologies": [
+        "Linux",
+        "Python",
+        "GCP",
+        "GKE",
+        "Aliyun",
+        "ACK",
+        "AWS",
+        "EKS",
+        "Cloudflare",
+        "JumpServer",
+        "Kubernetes",
+        "GitLab CI",
+        "Jenkins",
+        "Tekton"
+      ]
+    },
+    {
+      "company": "Industrial Technology Research Institute (ITRI)",
+      "role": "IoT Bootcamp (Full-Stack & System Fundamentals Training)",
+      "start": "2021-01",
+      "end": "2021-05",
+      "highlights": [
+        "Completed an intensive hands-on training program covering web development fundamentals, system programming, Linux environments, networking basics, and IoT system integration.",
+        "Built an IoT monitoring system named IndoorAirBox using Raspberry Pi and ESP8266 for temperature and humidity data collection."
+      ],
+      "technologies": [
+        "Web Development",
+        "Linux",
+        "Networking",
+        "IoT",
+        "Raspberry Pi",
+        "ESP8266"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "homelab",
+      "description": "A personal Linux lab environment built on Proxmox VE to support multiple personal projects.",
+      "highlights": [
+        "Built infrastructure with Proxmox VE to support personal Linux lab environments."
+      ],
+      "technologies": [
+        "Proxmox VE",
+        "Linux"
+      ]
+    },
+    {
+      "name": "resume",
+      "repository": "https://github.com/blackdesert575/resume",
+      "description": "An online CV website based on LaTeX for recording experience, projects, education, and skills.",
+      "highlights": [
+        "Built an online CV website based on LaTeX."
+      ],
+      "technologies": [
+        "LaTeX",
+        "GitHub Actions",
+        "Cloudflare Pages"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "National Dong Hwa University",
+      "degree": "Master of Science in Materials Science and Engineering",
+      "location": "Shoufeng, Hualien",
+      "start": "2016",
+      "end": "2019"
+    },
+    {
+      "school": "National Dong Hwa University",
+      "degree": "Bachelor of Science in Materials Science and Engineering",
+      "location": "Shoufeng, Hualien",
+      "start": "2012",
+      "end": "2016"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect Associate",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services"
+    }
+  ],
+  "awards": [],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/blackdesert575"
+    }
+  ]
+}

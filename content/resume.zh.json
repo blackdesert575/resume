@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "locale": "zh",
+    "version": "0.1.0",
+    "updatedAt": "2026-03-26",
+    "pdfFileName": "yh_resume_cht.pdf",
+    "slug": "resume"
+  },
+  "basics": {
+    "name": "Joe (永鴻) 黃",
+    "title": "System / DevOps Engineer",
+    "email": "yunghunghuang984@gmail.com",
+    "location": "Taipei, Taiwan",
+    "github": "https://github.com/blackdesert575"
+  },
+  "summary": "具備 Linux 維運、雲端與地端基礎設施、Kubernetes、CI/CD、觀測性與基礎設施自動化經驗的 System / DevOps / SRE 工程師。",
+  "skills": [
+    {
+      "category": "語言",
+      "items": [
+        "Mandarin (native)",
+        "English (professional working proficiency)"
+      ]
+    },
+    {
+      "category": "程式語言",
+      "items": [
+        "Python (proficient)",
+        "Bash (competence)",
+        "SQL (competence)",
+        "Rust (competence)",
+        "Golang (beginner)"
+      ]
+    },
+    {
+      "category": "版本控制",
+      "items": [
+        "Git"
+      ]
+    },
+    {
+      "category": "軟體框架",
+      "items": [
+        "Django",
+        "FastAPI",
+        "Selenium",
+        "pandas",
+        "SQLAlchemy"
+      ]
+    },
+    {
+      "category": "作業系統",
+      "items": [
+        "Linux (proficient)",
+        "macOS (competence)",
+        "Windows (beginner)"
+      ]
+    },
+    {
+      "category": "持續整合與持續部署",
+      "items": [
+        "GitLab Runner",
+        "GitHub Actions",
+        "Jenkins",
+        "Tekton Pipelines",
+        "Argo CD"
+      ]
+    },
+    {
+      "category": "串流與訊息傳遞",
+      "items": [
+        "Apache RocketMQ",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "category": "容器排程與編排",
+      "items": [
+        "Kubernetes (EKS, GKE, ACK, k0s, k3s)"
+      ]
+    },
+    {
+      "category": "Kubernetes 子系統",
+      "items": [
+        "ingress-nginx",
+        "cert-manager",
+        "ECK operator",
+        "KEDA",
+        "Istio"
+      ]
+    },
+    {
+      "category": "服務代理",
+      "items": [
+        "NGINX",
+        "HAProxy",
+        "MetalLB",
+        "Envoy"
+      ]
+    },
+    {
+      "category": "微服務發現與協調",
+      "items": [
+        "Apache Zookeeper",
+        "Nacos",
+        "Consul"
+      ]
+    },
+    {
+      "category": "容器映像檔倉庫",
+      "items": [
+        "Harbor"
+      ]
+    },
+    {
+      "category": "自動化配置",
+      "items": [
+        "Ansible",
+        "Atlantis",
+        "Terraform",
+        "Terragrunt",
+        "Pulumi"
+      ]
+    },
+    {
+      "category": "雲端供應商",
+      "items": [
+        "AWS",
+        "Google Cloud",
+        "Alibaba Cloud",
+        "Cloudflare"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "雷技資訊科技有限公司",
+      "role": "System / DevOps Engineer",
+      "start": "2025-06",
+      "end": "present",
+      "highlights": [
+        "在 Linux 終端機環境中工作。",
+        "使用 Packer 構築與維護以 Rocky Linux 作為基底的 EC2 機器映像檔。",
+        "主要在台灣工程團隊內維運 AWS 與地端基礎設施，並實際導入與使用以 Git 為核心的 Infrastructure as Code 工作流程，包含 Terraform、Terragrunt 與 Atlantis。",
+        "協助審查與驗證既有技術文件與基礎設施流程，並辨識跨區域之間流程與標準不一致的問題。",
+        "維護透過 Ansible 進行的系統初始化自動化，包含 Linux 設定、Java 執行環境、Nginx、RabbitMQ 與 NFS 部署。",
+        "為台灣工程團隊建立與維護基於 Groovy Script 的 Jenkins CI/CD 流水線。",
+        "管理 Bastion 主機與內部資產追蹤系統，基於 Consul 與 Golang 微服務，並將 EC2 metadata 整合至集中式存取控制機制。",
+        "透過 Prometheus 與 Grafana 分析系統資源使用情況與效能指標，以識別基礎設施瓶頸並提出優化方案。",
+        "維護以 Prometheus、Grafana、Consul 組成的觀測性技術堆疊。"
+      ],
+      "technologies": [
+        "Linux",
+        "AWS",
+        "Packer",
+        "Terraform",
+        "Terragrunt",
+        "Atlantis",
+        "Ansible",
+        "Jenkins",
+        "Groovy",
+        "Prometheus",
+        "Grafana",
+        "Consul",
+        "Golang"
+      ]
+    },
+    {
+      "company": "眾鼎科技有限公司",
+      "role": "System / Site Reliability Engineering (SRE) / DevOps Engineering",
+      "start": "2023-11",
+      "end": "2024-12",
+      "highlights": [
+        "在 Linux 終端機環境中工作。",
+        "參與輪值待命，約每月一週，與團隊成員共同排除正式環境中的問題。",
+        "支援部署於 AWS 或地端基礎設施上的加密貨幣交易所平台。",
+        "管理與維運部署於 AWS 或地端環境的 Kubernetes 叢集。",
+        "使用 Pulumi 與 Ansible 進行 AWS 與 Cloudflare 基礎設施管理。",
+        "管理與維運基於 GitLab CI 或 Jenkins 的 CI/CD 流水線。"
+      ],
+      "technologies": [
+        "Linux",
+        "AWS",
+        "Cloudflare",
+        "Kubernetes",
+        "Pulumi",
+        "Ansible",
+        "GitLab CI",
+        "Jenkins"
+      ]
+    },
+    {
+      "company": "雲磐科技有限公司",
+      "role": "Site Reliability Engineering (SRE) / DevOps / Cloud Engineering",
+      "start": "2021-11",
+      "end": "2023-04",
+      "highlights": [
+        "在 Linux 終端機環境中工作。",
+        "參與輪值待命，與團隊成員共同排除各類系統問題。",
+        "開發基於 Python 的網站監控自動化專案。",
+        "開發基於 GCP GKE 與阿里雲 ACK 的串流平台專案。",
+        "透過 JumpServer 管理 AWS、GCP、阿里雲、Cloudflare 等雲端基礎設施。",
+        "管理與維運部署於 AWS EKS、GCP GKE、阿里雲 ACK 的 Kubernetes 叢集。",
+        "管理與維運基於 GitLab CI、Jenkins、Tekton 的 CI/CD 流水線。"
+      ],
+      "technologies": [
+        "Linux",
+        "Python",
+        "GCP",
+        "GKE",
+        "Aliyun",
+        "ACK",
+        "AWS",
+        "EKS",
+        "Cloudflare",
+        "JumpServer",
+        "Kubernetes",
+        "GitLab CI",
+        "Jenkins",
+        "Tekton"
+      ]
+    },
+    {
+      "company": "工業技術研究院 產業學院",
+      "role": "物聯網整合開發人才就業班",
+      "start": "2021-01",
+      "end": "2021-05",
+      "highlights": [
+        "完成一項密集的實作導向培訓課程，內容涵蓋網頁開發基礎、系統程式設計、Linux 環境、網路基礎，以及 IoT 系統整合。",
+        "使用 Raspberry Pi 與 ESP8266 建置 IoT 監控系統 IndoorAirBox，專注於溫度與濕度資料蒐集。"
+      ],
+      "technologies": [
+        "Web Development",
+        "Linux",
+        "Networking",
+        "IoT",
+        "Raspberry Pi",
+        "ESP8266"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "homelab",
+      "description": "建置並維運基於 Proxmox VE 的個人 Linux 實驗環境，以支援多個個人專案。",
+      "highlights": [
+        "建置基於 Proxmox VE 的基礎設施，以支援多個個人專案的 Linux Lab 環境。"
+      ],
+      "technologies": [
+        "Proxmox VE",
+        "Linux"
+      ]
+    },
+    {
+      "name": "resume",
+      "repository": "https://github.com/blackdesert575/resume",
+      "description": "基於 LaTeX 建置的線上履歷網站，用於記錄工作經歷、專案成果、學歷背景與技能。",
+      "highlights": [
+        "建置基於 LaTeX 的線上履歷網站。"
+      ],
+      "technologies": [
+        "LaTeX",
+        "GitHub Actions",
+        "Cloudflare Pages"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "國立東華大學",
+      "degree": "材料科學與工程學系 碩士",
+      "location": "壽豐鄉, 花蓮縣",
+      "start": "2016",
+      "end": "2019"
+    },
+    {
+      "school": "國立東華大學",
+      "degree": "材料科學與工程學系 學士",
+      "location": "壽豐鄉, 花蓮縣",
+      "start": "2012",
+      "end": "2016"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect Associate",
+      "issuer": "Amazon Web Services"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services"
+    }
+  ],
+  "awards": [],
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/blackdesert575"
+    }
+  ]
+}
