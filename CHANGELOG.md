@@ -1,224 +1,48 @@
 # Changelog
 
-Generated on 2026-03-26 01:28:15 UTC
+All notable changes to this project will be documented in this file.
 
-## Summary
+The format is based on [Keep a Changelog](https://keepachangelog.com/zh-TW/1.1.0/),
+and this project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
+for future tagged releases.
 
-- Repository: resume
-- Total commits: 210
+## [Unreleased]
 
-## Human Authored Commits
+### Added
 
-- 2026-03-18 `ba1b396` Merge pull request #8 from blackdesert575/dependabot/npm_and_yarn/single-page-cv/flatted-3.4.2
-- 2026-03-18 `b07af39` Merge branch 'main' into dependabot/npm_and_yarn/single-page-cv/flatted-3.4.2
-- 2026-03-18 `6b276d0` Bump flatted from 3.3.2 to 3.4.2 in /single-page-cv
-- 2026-03-18 `3e2e19d` Merge pull request #7 from blackdesert575/dependabot/npm_and_yarn/single-page-cv/multi-770cfcd984
-- 2026-03-18 `b8b5289` Bump minimatch in /single-page-cv
-- 2026-03-11 `7c8a69b` Update src/yh_resume.tex
-- 2026-02-28 `ef859f2` Update /src/yh_resume_cht.tex, src/yh_resume_cht.pdf
-- 2026-02-28 `2f9f565` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-28 `6b52ad1` Update README.md
-- 2026-02-28 `423c23d` Update READEMD, Update yh_resume.tex, Add yh_resume_cht.tex, yh_resume_cht.pdf Add codex support files
-- 2026-02-28 `a863d47` Use latexmk -c for clean tasks
-- 2026-02-25 `01594b0` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-25 `32dd3b3` Update **/yh_resume.tex
-- 2026-02-25 `0896c67` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-25 `338d763` Update **/yh_resume.tex
-- 2026-02-25 `db695ae` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-25 `1fbbb84` Update **/yh_resume.tex
-- 2026-02-14 `9e84dba` Merge pull request #6 from blackdesert575/dependabot/npm_and_yarn/single-page-cv/next-15.5.10
-- 2026-02-14 `e4e9751` Bump next from 15.4.10 to 15.5.10 in /single-page-cv
-- 2026-02-11 `e5fb853` Update **/**.tex
-- 2026-02-11 `40e426e` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-11 `aaec3c6` Update **/**.tex
-- 2026-02-09 `76af5e7` Update **/yh_resume.tex
-- 2026-02-09 `9833801` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-09 `c4f5d7b` Update **/yh_resume.tex Add AGENTS.md
-- 2026-02-04 `072c6e4` Update src/yh_resume.tex
-- 2026-02-04 `2f2509e` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2026-02-04 `d6bc881` Update src/yh_resume.tex
-- 2026-01-11 `02d09eb` Merge pull request #5 from blackdesert575/dependabot/npm_and_yarn/single-page-cv/next-15.4.10
-- 2026-01-11 `2bd5e97` Bump next from 15.4.7 to 15.4.10 in /single-page-cv
-- 2025-12-20 `a818a6d` Update src/yh_resume.tex
-- 2025-12-20 `0158432` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2025-12-20 `54e7ec5` Update src/yh_resume.tex
-- 2025-12-19 `3e3fba3` Update src/yh_resume.tex
-- 2025-12-19 `895d061` Update wrangler.jsonc for Observability
-- 2025-12-19 `d1044c8` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2025-12-19 `984468a` Update src/yh_resume.tex
-- 2025-12-18 `1267a5f` Update src/yh_resume.tex
-- 2025-12-18 `c154b13` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2025-12-18 `3b8c292` Update src/yh_resume.tex
-- 2025-12-18 `ba207b8` Update src/yh_resume.tex
-- 2025-12-18 `82c3f03` escape \&
-- 2025-12-18 `4664715` latex escape character &.
-- 2025-12-18 `3e12393` Update src/yh_resume.tex
-- 2025-12-18 `2773a03` Update src/yh_resume.tex
-- 2025-12-18 `1900556` Update src/yh_resume.tex
-- 2025-12-05 `6d4b3e2` Update src/yh_resume.tex
-- 2025-11-26 `dbcc386` Test .github/workflows/ci.yml
-- 2025-11-26 `97322bd` Test .github/workflows/ci.yml
-- 2025-11-26 `ffe7324` Test .github/workflows/ci.yml
-- 2025-11-26 `522e894` Test .github/workflows/ci.yml
-- 2025-11-26 `45b844f` Test .github/workflows/ci.yml
-- 2025-11-26 `4c4bada` Update **/*/tex
-- 2025-11-26 `65ace31` Update **/*/tex, Remove **/*/pdf
-- 2025-11-26 `ac84ae9` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2025-11-26 `71e0428` Test .github/workflows/ci.yml
-- 2025-11-26 `a641c7e` Merge pull request #4 from blackdesert575/dependabot/npm_and_yarn/single-page-cv/js-yaml-4.1.1
-- 2025-11-26 `fbb48bf` Test .github/workflows/ci.yml
-- 2025-11-26 `df5cab4` Test .github/workflows/ci.yml
-- 2025-11-26 `e022cbf` Test CI on local docker container
-- 2025-11-26 `6fcf927` Test
-- 2025-11-26 `7bcdd63` Test
-- 2025-11-26 `bc551a3` Test
-- 2025-11-26 `cd6c588` Test
-- 2025-11-26 `c3853cb` Test
-- 2025-11-26 `e5b6421` Update ./scripts/build.sh for deploy to Cloudflare Pages
-- 2025-11-18 `3c68627` Bump js-yaml from 4.1.0 to 4.1.1 in /single-page-cv
-- 2025-10-09 `8239a3a` chore:         modified:   README.md         modified:   output/index.html         modified:   src/yh_resume.pdf         modified:   src/yh_resume.tex
-- 2025-10-03 `30482f2` Add resume.ootori.dev.png for Qrcode scan
-- 2025-10-03 `b6b80ed` chore: Update src/yh_resume.**, output/index.html
-- 2025-10-03 `1f09dfd` Update **
-- 2025-09-10 `68eeaa4` Merge remote-tracking branch 'refs/remotes/origin/main'
-- 2025-09-10 `cadfb9f` Update    src/yh_resume.tex
-- 2025-09-05 `f37b516` Merge pull request #3 from hong539/dependabot/npm_and_yarn/single-page-cv/eslint/plugin-kit-0.3.5
-- 2025-09-05 `6dfc218` Bump @eslint/plugin-kit from 0.3.3 to 0.3.5 in /single-page-cv
-- 2025-09-05 `43f0d90` Merge pull request #2 from hong539/dependabot/npm_and_yarn/single-page-cv/next-15.4.7
-- 2025-09-04 `ec37d16` Bump next from 15.4.2 to 15.4.7 in /single-page-cv
-- 2025-07-19 `0aba2c5` Update src/yh_resume.tex single-page-cv/package*.json
-- 2025-06-10 `61491fa` Update resume
-- 2025-04-14 `13d6d0e` Update resume/**
-- 2025-04-14 `61ab4a9` Add robots.txt, Update README
-- 2025-03-25 `8ea32eb` [Nginx + pdf2htmlex bundled page output(html/css/javascript all in one)] Update README, yh_resume
-- 2025-03-25 `7f9801d` Merge pull request #1 from hong539/dependabot/npm_and_yarn/single-page-cv/next-15.2.3
-- 2025-03-24 `a173e38` Bump next from 15.1.6 to 15.2.3 in /single-page-cv
-- 2025-02-26 `3568f32` Update resume/**
-- 2025-02-24 `04a1e94` Update README, Dockerfile
-- 2025-02-24 `dadee6a` Update resume/**
-- 2025-02-24 `804f794` Update resume/**
-- 2025-02-13 `03b48ed` Update resume/**
-- 2025-02-13 `3fa82ad` Update resume/**
-- 2025-02-11 `8559b72` Update resume/**
-- 2025-02-10 `87f442d` Update resume/**
-- 2025-02-07 `f0ee2b9` Fix single-page-cv css
-- 2025-02-07 `1805e5a` Fix single-page-cv layout
-- 2025-02-07 `0359d45` Update resume/**
-- 2025-02-05 `b22afc3` Remove unused parts for react app: single-page-cv
-- 2025-02-05 `b4e4a98` Test react app: single-page-cv
-- 2025-02-05 `bf191dc` Update README
-- 2025-02-05 `253d685` Upgrade Dockerfile
-- 2025-02-05 `62818fc` Remove python and poetry part Add Rust & cargo for build cli tools Test build with separated files for reverse engineering
-- 2025-02-04 `74134e2` Update resume/**
-- 2025-02-04 `8208e9f` Update resume/**
-- 2025-02-04 `e08dcdc` Update resume/**
-- 2025-01-08 `9eaebaa` Update README
-- 2025-01-08 `fca0f64` Update src/**, scripts/**, README
-- 2024-12-21 `a07f6d8` Update resume.tex with related files, README Add CI/CD scripts: pipelines.sh
-- 2024-04-27 `cef2d62` Add docker-compose.yaml
-- 2024-04-18 `13eb2c1` Update resume
-- 2023-11-11 `b64f7df` Update resume
-- 2023-10-25 `b3ce6ef` Update codes
-- 2023-10-23 `a329c15` Update docs
-- 2023-10-23 `7470a06` Update resume
-- 2023-10-20 `34b2b86` update codes
-- 2023-10-13 `0487c33` Update all
-- 2023-10-13 `cac4579` Update all
-- 2023-10-06 `27dd87b` Update codes
-- 2023-10-06 `b7120b2` Update codes
-- 2023-10-06 `9be5ca3` Update codes
-- 2023-09-14 `14d75b8` Update resume
-- 2023-09-06 `7088209` Update codes
-- 2023-08-22 `bd60357` Update codes
-- 2023-08-22 `f958272` Update codes
-- 2023-08-16 `c94a9a8` Update codes
-- 2023-06-22 `da1f05b` Up codes
-- 2023-06-22 `990ad2b` Up codes
-- 2023-06-22 `7aea5c9` Up codes
-- 2023-06-14 `9cd1f64` Up makefile and clean files
-- 2023-06-14 `68eed43` Up codes
-- 2023-06-14 `bb2309d` Up codes
-- 2023-06-10 `34623e2` Up codes
-- 2023-06-10 `f4be37f` Up codes
-- 2023-06-10 `d0d8c6d` Up docs
-- 2023-06-10 `bf7f2bc` Up codes
-- 2023-05-31 `93d4fd1` test codes
-- 2023-05-31 `abbce03` Up docs
-- 2023-05-31 `6026660` Up codes
-- 2023-05-31 `480f06e` Up codes
-- 2023-05-31 `be87a30` Up files from htlatex
-- 2023-05-27 `5dcb75a` Test make
-- 2023-05-27 `0e1a963` Remove build
-- 2023-05-27 `759a59e` Test vscode extension: Latex workshop
-- 2023-05-27 `4adf070` Test makefile
-- 2023-05-26 `4004d00` Up resume
-- 2023-05-26 `c91574a` Up resume
-- 2023-05-24 `4c2f9fa` Up resume
-- 2023-05-23 `0ce5ef3` Test make with Makefile
-- 2023-05-23 `ccc9112` Test make with Makefile
-- 2023-05-23 `23f7b67` Up Makefile
-- 2023-05-22 `13d0a73` Test make
-- 2023-05-22 `ea37aa0` Up docs
-- 2023-05-22 `95ea505` Test build on Linux
-- 2023-05-22 `d7249ef` Up docs for using latexmk
-- 2023-05-22 `a5a684d` Up docs
-- 2023-05-22 `c31f9c3` Up docs for Latex
-- 2023-05-05 `985fb89` Up codes
-- 2023-05-05 `9eecbb3` Up codes
-- 2023-05-05 `b259f7a` Up codes
-- 2023-05-05 `fb597b0` Clean codes
-- 2023-05-03 `2e8f692` Up yh_resume
-- 2023-05-03 `853c851` Up yh_resume
-- 2023-05-03 `4ff4838` Up yh_resume
-- 2023-05-03 `92c042a` Up yh_resume
-- 2023-05-03 `adf0073` Up yh_resume
-- 2023-05-03 `85cdbdd` Up yh_resume
-- 2023-05-03 `d788cce` Up yh_resume
-- 2023-05-01 `3979b58` Up yh_bio
-- 2023-05-01 `95798cd` Up bio
-- 2023-05-01 `519b11d` Up codes
-- 2023-04-26 `802c79f` Up yh_bio and folders
-- 2023-04-24 `86bf787` Up resume
-- 2023-04-01 `8d45d12` Up my_resume
-- 2023-04-01 `0096807` Up my_resume
-- 2023-03-31 `4342efe` Up my_resume
-- 2023-03-29 `d246614` Up My_resume
-- 2023-03-29 `5921b8b` Up my_resume
-- 2023-03-28 `67fa99d` Up resume
-- 2023-03-28 `86ceb80` Up my resume
-- 2023-03-28 `9f93ccb` Add src/resume_files
-- 2023-03-28 `12d0c61` Initial commit
+- Added a structured content layer under `content/` with:
+  - `content/resume.en.json`
+  - `content/resume.zh.json`
+- Added jq-based content validation with `scripts/validate_content_json.sh`.
+- Added local Linux VM and localhost helper scripts for `single-page-cv/`:
+  - `scripts/install_single-page-cv_deps.sh`
+  - `scripts/dev_single-page-cv.sh`
+  - `scripts/build_single-page-cv_local.sh`
+  - `scripts/start_single-page-cv.sh`
+  - `scripts/test_single-page-cv_local.sh`
+- Added repository documentation for:
+  - current workflow
+  - future workflow
+  - git workflow basics
+  - rearchitecture planning
+  - content model design
+  - `single-page-cv` tech stack
+  - React / Next.js learning guide
+  - Linux VM development workflow
+- Added a simple `EN / ZH` query-string language switcher to `single-page-cv/`.
+- Added localized UI copy switching for major web resume section labels and fixed interface text.
 
-## Automation Commits
+### Changed
 
-- 2026-03-18 `67c5938` Commit from GitHub Actions (ci)
-- 2026-03-18 `4b33e7c` Commit from GitHub Actions (ci)
-- 2026-03-18 `9e73d58` Commit from GitHub Actions (ci)
-- 2026-03-18 `37455f8` Commit from GitHub Actions (ci)
-- 2026-03-11 `b161586` Commit from GitHub Actions (ci)
-- 2026-02-28 `84a1714` Commit from GitHub Actions (ci)
-- 2026-02-28 `cfe5361` Commit from GitHub Actions (ci)
-- 2026-02-28 `a740e67` Commit from GitHub Actions (ci)
-- 2026-02-24 `22a793a` Commit from GitHub Actions (ci)
-- 2026-02-24 `48f70ef` Commit from GitHub Actions (ci)
-- 2026-02-24 `b8f0f1e` Commit from GitHub Actions (ci)
-- 2026-02-14 `dd7214b` Commit from GitHub Actions (ci)
-- 2026-02-14 `ea01e6f` Commit from GitHub Actions (ci)
-- 2026-02-11 `3e44aa5` Commit from GitHub Actions (ci)
-- 2026-02-09 `78ba599` Commit from GitHub Actions (ci)
-- 2026-02-09 `4ab4303` Commit from GitHub Actions (ci)
-- 2026-02-09 `3d966db` Commit from GitHub Actions (ci)
-- 2026-02-04 `8af6e5b` Commit from GitHub Actions (ci)
-- 2026-01-11 `9bff868` Commit from GitHub Actions (ci)
-- 2026-01-11 `245ae9a` Commit from GitHub Actions (ci)
-- 2025-12-20 `a0bfa7d` Commit from GitHub Actions (ci)
-- 2025-12-20 `40d2e13` Commit from GitHub Actions (ci)
-- 2025-12-19 `6770307` Commit from GitHub Actions (ci)
-- 2025-12-19 `16b778d` Commit from GitHub Actions (ci)
-- 2025-12-18 `177bf6b` Commit from GitHub Actions (ci)
-- 2025-12-18 `73e1a7b` Commit from GitHub Actions (ci)
-- 2025-12-18 `2ddc428` Commit from GitHub Actions (ci)
-- 2025-12-05 `d553d33` Commit from GitHub Actions (ci)
-- 2025-11-26 `b08ec35` Commit from GitHub Actions (ci)
-- 2025-11-26 `1ea93da` Commit from GitHub Actions (ci)
+- Changed `single-page-cv/` from a PDF embed page into a content-driven Next.js resume page that reads from `content/*.json`.
+- Changed the web resume layout to a more formal resume-style presentation closer to the PDF version.
+- Changed repository documentation links under `docs/` to relative paths so they render correctly on GitHub.
+- Changed `README.md` to reflect the current hybrid project state:
+  - LaTeX / PDF flow remains available
+  - structured content and Next.js web rendering are now first-class parts of the repo
+  - `docs/` usage is documented from the repository root
+- Changed changelog generation direction away from raw `git log` dumping toward a human-curated Keep a Changelog format.
 
+### Removed
+
+- Removed the local `skills/` directory that was no longer needed in the repository.

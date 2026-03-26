@@ -3,7 +3,118 @@
 My resume generated from *.tex file to request a job.
 LaTeX template for my personal resume forked from [jakegut / resume](https://github.com/jakegut/resume)
 
+## current status
+
+This repository is currently in a transition period:
+
+- `src/*.tex` is still the main source for the production PDF workflow
+- `content/*.json` now exists as a new structured content layer
+- `single-page-cv/` is no longer only a PDF wrapper, it can now render resume content as a web page
+- `docs/` now records the current workflow, target workflow, content model, learning guides, and local development instructions
+
+Recent changes:
+
+- added structured content files:
+  - `content/resume.en.json`
+  - `content/resume.zh.json`
+- added jq-based content validation:
+  - `bash scripts/validate_content_json.sh`
+- updated `single-page-cv/` to render JSON content instead of only embedding PDF
+- added simple `EN / ZH` query-string switching in `single-page-cv/`
+- added local Linux VM helper scripts for `single-page-cv/`
+- expanded `docs/` so the repository architecture and workflow are documented inside the repo
+
+## repository map
+
+- `src/`
+  - LaTeX resume sources and generated PDFs
+- `content/`
+  - structured resume data for web and future renderer refactors
+- `single-page-cv/`
+  - Next.js app for the web version of the resume
+- `scripts/`
+  - helper scripts for PDF build, web app local workflow, validation, and deployment
+- `docs/`
+  - workflow, architecture, content model, learning notes, and local development guides
+- `output/`
+  - generated web artifacts currently used by deployment flow
+
 ## quick start
+
+### validate structured content
+
+```shell
+bash scripts/validate_content_json.sh
+```
+
+### run single-page-cv locally
+
+```shell
+bash scripts/install_single-page-cv_deps.sh
+bash scripts/dev_single-page-cv.sh
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+If port `3000` is already in use, Next.js may automatically switch to another port such as `3001`.
+
+### production-style build check for single-page-cv
+
+```shell
+bash scripts/build_single-page-cv_local.sh
+bash scripts/start_single-page-cv.sh
+```
+
+## how to use docs
+
+Start with:
+
+- [`docs/index.md`](./docs/index.md)
+
+Recommended reading order:
+
+1. [`docs/current-workflow.md`](./docs/current-workflow.md)
+2. [`docs/future-workflow.md`](./docs/future-workflow.md)
+3. [`docs/git-workflow-cheatsheet.md`](./docs/git-workflow-cheatsheet.md)
+4. [`docs/single-page-cv-tech-stack.md`](./docs/single-page-cv-tech-stack.md)
+5. [`docs/react-nextjs-learning-guide.md`](./docs/react-nextjs-learning-guide.md)
+6. [`docs/single-page-cv-linux-vm-workflow.md`](./docs/single-page-cv-linux-vm-workflow.md)
+7. [`docs/rearchitecture-plan.md`](./docs/rearchitecture-plan.md)
+8. [`docs/content-model.md`](./docs/content-model.md)
+
+Use the docs like this:
+
+- if you want to understand why branch conflicts keep happening:
+  - read [`docs/current-workflow.md`](./docs/current-workflow.md)
+  - then read [`docs/future-workflow.md`](./docs/future-workflow.md)
+- if you want to understand the target refactor direction:
+  - read [`docs/rearchitecture-plan.md`](./docs/rearchitecture-plan.md)
+- if you want to understand the structured content format:
+  - read [`docs/content-model.md`](./docs/content-model.md)
+- if you want to work on the Next.js app:
+  - read [`docs/single-page-cv-tech-stack.md`](./docs/single-page-cv-tech-stack.md)
+  - then read [`docs/single-page-cv-linux-vm-workflow.md`](./docs/single-page-cv-linux-vm-workflow.md)
+- if you want to start learning React / Next.js using this repo itself:
+  - read [`docs/react-nextjs-learning-guide.md`](./docs/react-nextjs-learning-guide.md)
+
+## older setup notes
+
+### latex / pdf workflow
+
+```shell
+make all
+make clean
+```
+
+or:
+
+```shell
+bash scripts/make_pdf.sh
+```
 
 * requirement packages
   * texlive-full

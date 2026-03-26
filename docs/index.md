@@ -12,8 +12,9 @@ Recommended reading order:
 4. [single-page-cv-tech-stack.md](./single-page-cv-tech-stack.md)
 5. [react-nextjs-learning-guide.md](./react-nextjs-learning-guide.md)
 6. [single-page-cv-linux-vm-workflow.md](./single-page-cv-linux-vm-workflow.md)
-7. [rearchitecture-plan.md](./rearchitecture-plan.md)
-8. [content-model.md](./content-model.md)
+7. [commit-style.md](./commit-style.md)
+8. [rearchitecture-plan.md](./rearchitecture-plan.md)
+9. [content-model.md](./content-model.md)
 
 ## Documents
 
@@ -73,6 +74,12 @@ Read this when you want to start contributing code to `single-page-cv/` yourself
 Provides the shortest practical workflow for running and testing `single-page-cv/` on a local Linux machine or Linux VM.
 
 Read this when you want the minimum set of commands to install dependencies, start the dev server, and verify production build behavior.
+
+### [commit-style.md](./commit-style.md)
+
+Defines a simple commit subject style that is easier to summarize into a Keep a Changelog style changelog.
+
+Read this when you want future commit messages to stay short, consistent, and easier to turn into human-readable release notes.
 
 ### [rearchitecture-plan.md](./rearchitecture-plan.md)
 
