@@ -5,6 +5,8 @@ BASE_DIR=$(pwd)
 
 echo $BASE_DIR
 
+# validate structured content for web renderer
+bash $BASE_DIR/scripts/validate_single-page-cv_content.sh
 # generate *.pdf from *.tex
 bash $BASE_DIR/scripts/make_pdf.sh
 # generate *.html from *.pdf

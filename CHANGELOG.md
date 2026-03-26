@@ -35,6 +35,12 @@ for future tagged releases.
 - Added a simple `EN / ZH` query-string language switcher to `single-page-cv/`.
 - Added localized UI copy switching for major web resume section labels and fixed interface text.
 - Added `single-page-cv/src/lib/` for shared content-loading and UI-copy logic.
+- Added React-based PDF generation for `single-page-cv/` with:
+  - `@react-pdf/renderer`
+  - `single-page-cv/scripts/generate-pdf.mjs`
+  - `scripts/generate_single-page-cv_pdf.sh`
+- Added React PDF renderer support files under `single-page-cv/scripts/lib/`.
+- Added `docs/web-pdf-generation-options.md` to record PDF generation options and the selected React PDF implementation path.
 
 ### Changed
 
@@ -43,10 +49,13 @@ for future tagged releases.
 - Changed `single-page-cv` page structure by splitting the main resume page into focused components.
 - Changed locale handling so metadata, PDF download target, and UI copy are routed through shared helpers.
 - Changed `single-page-cv` lint setup so `npm run lint` now runs successfully with ESLint flat config.
+- Changed local `single-page-cv` build and test scripts so they now also generate React-based PDF output.
+- Changed CI and helper scripts so structured content validation runs before downstream build steps.
 - Changed repository documentation links under `docs/` to relative paths so they render correctly on GitHub.
 - Changed `README.md` to reflect the current hybrid project state:
   - LaTeX / PDF flow remains available
   - structured content and Next.js web rendering are now first-class parts of the repo
+  - React-based PDF generation is now documented from the repository root
   - `docs/` usage is documented from the repository root
 - Changed changelog generation direction away from raw `git log` dumping toward a human-curated Keep a Changelog format.
 

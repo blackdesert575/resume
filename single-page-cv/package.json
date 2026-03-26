@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "validate:content": "node scripts/validate-content.mjs"
+    "validate:content": "node scripts/validate-content.mjs",
+    "pdf:generate": "node scripts/generate-pdf.mjs"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.3.2",
     "next": "^15.5.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

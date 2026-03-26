@@ -12,9 +12,10 @@ Recommended reading order:
 4. [single-page-cv-tech-stack.md](./single-page-cv-tech-stack.md)
 5. [react-nextjs-learning-guide.md](./react-nextjs-learning-guide.md)
 6. [single-page-cv-linux-vm-workflow.md](./single-page-cv-linux-vm-workflow.md)
-7. [commit-style.md](./commit-style.md)
-8. [rearchitecture-plan.md](./rearchitecture-plan.md)
-9. [content-model.md](./content-model.md)
+7. [web-pdf-generation-options.md](./web-pdf-generation-options.md)
+8. [commit-style.md](./commit-style.md)
+9. [rearchitecture-plan.md](./rearchitecture-plan.md)
+10. [content-model.md](./content-model.md)
 
 ## Documents
 
@@ -75,6 +76,18 @@ Provides the shortest practical workflow for running and testing `single-page-cv
 
 Read this when you want the minimum set of commands to install dependencies, start the dev server, and verify production build behavior.
 
+### [web-pdf-generation-options.md](./web-pdf-generation-options.md)
+
+Records the current PDF generation direction for the web renderer, including:
+
+- why the repository originally compared multiple PDF generation approaches
+- how `@react-pdf/renderer` compares with Playwright / Puppeteer
+- the current implementation path for generating:
+  - `single-page-cv/public/yh_resume.pdf`
+  - `single-page-cv/public/yh_resume_cht.pdf`
+
+Read this when you want to understand or extend the React-based PDF generation workflow.
+
 ### [commit-style.md](./commit-style.md)
 
 Defines a simple commit subject style that is easier to summarize into a Keep a Changelog style changelog.
@@ -120,10 +133,13 @@ If you want to start implementation of the new content layer:
 
 - read [content-model.md](./content-model.md)
 
+If you want to understand or extend web-based PDF generation:
+
+- read [web-pdf-generation-options.md](./web-pdf-generation-options.md)
+
 ## Next Recommended Implementation Steps
 
-1. create `content/resume.en.json`
-2. create `content/resume.zh.json`
-3. add schema validation
-4. make the web renderer consume validated content
-5. refactor PDF generation to consume the same content model
+1. refine the React PDF layout to better match the formal LaTeX output
+2. decide whether React-generated PDFs should replace or coexist with LaTeX PDFs
+3. wire React PDF generation into the long-term CI or release workflow
+4. keep the shared content model as the single source of truth

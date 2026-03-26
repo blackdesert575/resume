@@ -25,6 +25,9 @@ Recent changes:
 - added simple `EN / ZH` query-string switching in `single-page-cv/`
 - improved `single-page-cv/` structure by splitting the resume page into smaller components and moving content helpers into `src/lib/`
 - fixed `single-page-cv` lint so both `npm run lint` and `npm run build` now work
+- added React-based PDF generation for `single-page-cv/` with `@react-pdf/renderer`
+  - `cd single-page-cv && npm run pdf:generate`
+  - `bash scripts/generate_single-page-cv_pdf.sh`
 - added local Linux VM helper scripts for `single-page-cv/`
 - expanded `docs/` so the repository architecture and workflow are documented inside the repo
 
@@ -81,6 +84,24 @@ npm run lint
 npm run build
 ```
 
+### generate english and chinese PDF files from single-page-cv
+
+```shell
+cd single-page-cv
+npm run pdf:generate
+```
+
+or:
+
+```shell
+bash scripts/generate_single-page-cv_pdf.sh
+```
+
+This generates:
+
+- `single-page-cv/public/yh_resume.pdf`
+- `single-page-cv/public/yh_resume_cht.pdf`
+
 ### production-style build check for single-page-cv
 
 ```shell
@@ -102,8 +123,9 @@ Recommended reading order:
 4. [`docs/single-page-cv-tech-stack.md`](./docs/single-page-cv-tech-stack.md)
 5. [`docs/react-nextjs-learning-guide.md`](./docs/react-nextjs-learning-guide.md)
 6. [`docs/single-page-cv-linux-vm-workflow.md`](./docs/single-page-cv-linux-vm-workflow.md)
-7. [`docs/rearchitecture-plan.md`](./docs/rearchitecture-plan.md)
-8. [`docs/content-model.md`](./docs/content-model.md)
+7. [`docs/web-pdf-generation-options.md`](./docs/web-pdf-generation-options.md)
+8. [`docs/rearchitecture-plan.md`](./docs/rearchitecture-plan.md)
+9. [`docs/content-model.md`](./docs/content-model.md)
 
 Use the docs like this:
 
@@ -117,6 +139,8 @@ Use the docs like this:
 - if you want to work on the Next.js app:
   - read [`docs/single-page-cv-tech-stack.md`](./docs/single-page-cv-tech-stack.md)
   - then read [`docs/single-page-cv-linux-vm-workflow.md`](./docs/single-page-cv-linux-vm-workflow.md)
+- if you want to understand how the web renderer now generates PDF:
+  - read [`docs/web-pdf-generation-options.md`](./docs/web-pdf-generation-options.md)
 - if you want to start learning React / Next.js using this repo itself:
   - read [`docs/react-nextjs-learning-guide.md`](./docs/react-nextjs-learning-guide.md)
 
