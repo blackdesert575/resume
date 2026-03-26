@@ -1,0 +1,221 @@
+%------------------------
+% Resume in Latex
+% Generated from content/resume.en.json
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[scale=0.90,lf]{FiraMono}
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\usepackage{tgheros}
+\usepackage[T1]{fontenc}
+
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\renewcommand*\familydefault{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey} #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+\setlength{\footskip}{5pt}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge Joe (Yung-Hung) Huang} \\ \vspace{5pt}
+    System / DevOps Engineer \\ \vspace{4pt}
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{\href{mailto:yunghunghuang984@gmail.com}{yunghunghuang984@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \texttt{\href{https://github.com/blackdesert575}{blackdesert575}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Taipei, Taiwan}
+    \\ \vspace{-3pt}
+\end{center}
+
+\section{SUMMARY}
+\begin{itemize}[leftmargin=0in, label={}]
+  \item\small{System / DevOps / SRE engineer with experience across Linux operations, cloud and on-premise infrastructure, Kubernetes, CI/CD, observability, and infrastructure automation.}
+\end{itemize}
+
+\section{EXPERIENCE}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {System / DevOps Engineer}{Jun 2025 -- Present}
+  {Logic Solutions Inc.}{}
+  \resumeItemListStart
+    \resumeItem{Worked in a Linux terminal environment.}
+    \resumeItem{Built and maintained a Rocky Linux based Amazon Machine Image for EC2 using Packer.}
+    \resumeItem{Maintained AWS and on-premise infrastructure within the Taiwan engineering team using Git-based infrastructure as code workflows with Terraform, Terragrunt, and Atlantis.}
+    \resumeItem{Assisted in reviewing and validating existing technical documentation and infrastructure processes, identifying inconsistencies across regions.}
+    \resumeItem{Maintained system initialization automation with Ansible for Linux configuration, Java runtime, Nginx, RabbitMQ, and NFS setup.}
+    \resumeItem{Built and maintained Jenkins CI/CD pipelines using Groovy scripts for Taiwan engineering workflows.}
+    \resumeItem{Managed bastion host and internal asset tracking services based on Consul and Golang services, integrating EC2 metadata into centralized access control.}
+    \resumeItem{Analyzed system resource utilization and performance metrics through Prometheus and Grafana to identify infrastructure bottlenecks and propose optimization solutions.}
+    \resumeItem{Maintained the observability stack built around Prometheus, Grafana, and Consul.}
+    \resumeItem{\textbf{Technologies}: Linux, AWS, Packer, Terraform, Terragrunt, Atlantis, Ansible, Jenkins, Groovy, Prometheus, Grafana, Consul, Golang}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {System / Site Reliability Engineering (SRE) / DevOps Engineering}{Nov 2023 -- Dec 2024}
+  {Mending Technology CO., LTD.}{}
+  \resumeItemListStart
+    \resumeItem{Worked in a Linux terminal environment.}
+    \resumeItem{Participated in on-call rotations about one week per month and troubleshot production issues with team members.}
+    \resumeItem{Supported a cryptocurrency exchange platform on AWS and on-premise infrastructure.}
+    \resumeItem{Administered Kubernetes clusters on AWS and on-premise environments.}
+    \resumeItem{Managed AWS and Cloudflare infrastructure with Pulumi and Ansible.}
+    \resumeItem{Administered CI/CD pipelines with GitLab CI and Jenkins.}
+    \resumeItem{\textbf{Technologies}: Linux, AWS, Cloudflare, Kubernetes, Pulumi, Ansible, GitLab CI, Jenkins}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Site Reliability Engineering (SRE) / DevOps / Cloud Engineering}{Nov 2021 -- Apr 2023}
+  {CloudRock Technology Co., Ltd}{}
+  \resumeItemListStart
+    \resumeItem{Worked in a Linux terminal environment.}
+    \resumeItem{Participated in on-call rotations and troubleshooting with team members.}
+    \resumeItem{Developed a Python automation project for web monitoring.}
+    \resumeItem{Developed a streaming platform project based on GCP GKE and Aliyun ACK.}
+    \resumeItem{Managed cloud infrastructure across AWS, GCP, Aliyun, and Cloudflare with JumpServer.}
+    \resumeItem{Administered Kubernetes clusters on AWS EKS, GCP GKE, and Aliyun ACK.}
+    \resumeItem{Administered CI/CD pipelines with GitLab CI, Jenkins, and Tekton.}
+    \resumeItem{\textbf{Technologies}: Linux, Python, GCP, GKE, Aliyun, ACK, AWS, EKS, Cloudflare, JumpServer, Kubernetes, GitLab CI, Jenkins, Tekton}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {IoT Bootcamp (Full-Stack \& System Fundamentals Training)}{Jan 2021 -- May 2021}
+  {Industrial Technology Research Institute (ITRI)}{}
+  \resumeItemListStart
+    \resumeItem{Completed an intensive hands-on training program covering web development fundamentals, system programming, Linux environments, networking basics, and IoT system integration.}
+    \resumeItem{Built an IoT monitoring system named IndoorAirBox using Raspberry Pi and ESP8266 for temperature and humidity data collection.}
+    \resumeItem{\textbf{Technologies}: Web Development, Linux, Networking, IoT, Raspberry Pi, ESP8266}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{PROJECTS}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+  {\textbf{homelab}}{}
+  \resumeItemListStart
+    \resumeItem{A personal Linux lab environment built on Proxmox VE to support multiple personal projects.}
+    \resumeItem{Built infrastructure with Proxmox VE to support personal Linux lab environments.}
+    \resumeItem{\textbf{Technologies}: Proxmox VE, Linux}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+  {\textbf{resume}}{}
+  \resumeItemListStart
+    \resumeItem{An online CV website based on LaTeX for recording experience, projects, education, and skills.}
+    \resumeItem{Built an online CV website based on LaTeX.}
+    \resumeItem{\textbf{Repository}: \href{https://github.com/blackdesert575/resume}{https://github.com/blackdesert575/resume}}
+    \resumeItem{\textbf{Technologies}: LaTeX, GitHub Actions, Cloudflare Pages}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {National Dong Hwa University}{2016 -- 2019}
+  {Master of Science in Materials Science and Engineering}{Shoufeng, Hualien}
+
+\resumeSubheading
+  {National Dong Hwa University}{2012 -- 2016}
+  {Bachelor of Science in Materials Science and Engineering}{Shoufeng, Hualien}
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Mandarin (native), English (professional working proficiency)} \\
+     \textbf{Programming Languages}{: Python (proficient), Bash (competence), SQL (competence), Rust (competence), Golang (beginner)} \\
+     \textbf{Version Control}{: Git} \\
+     \textbf{Frameworks}{: Django, FastAPI, Selenium, pandas, SQLAlchemy} \\
+     \textbf{Operating Systems}{: Linux (proficient), macOS (competence), Windows (beginner)} \\
+     \textbf{CI/CD}{: GitLab Runner, GitHub Actions, Jenkins, Tekton Pipelines, Argo CD} \\
+     \textbf{Streaming \& Messaging}{: Apache RocketMQ, RabbitMQ} \\
+     \textbf{Scheduling \& Orchestration}{: Kubernetes (EKS, GKE, ACK, k0s, k3s)} \\
+     \textbf{Kubernetes Subsystems}{: ingress-nginx, cert-manager, ECK operator, KEDA, Istio} \\
+     \textbf{Service Proxy}{: NGINX, HAProxy, MetalLB, Envoy} \\
+     \textbf{Coordination \& Service Discovery}{: Apache Zookeeper, Nacos, Consul} \\
+     \textbf{Container Registry}{: Harbor} \\
+     \textbf{Automation \& Configuration}{: Ansible, Atlantis, Terraform, Terragrunt, Pulumi} \\
+     \textbf{Cloud Providers}{: AWS, Google Cloud, Alibaba Cloud, Cloudflare} \\
+     \textbf{Certification}{: AWS Certified Solutions Architect Associate, AWS Certified Cloud Practitioner}
+    }}
+ \end{itemize}
+
+\end{document}

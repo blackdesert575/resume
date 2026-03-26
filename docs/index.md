@@ -13,9 +13,10 @@ Recommended reading order:
 5. [react-nextjs-learning-guide.md](./react-nextjs-learning-guide.md)
 6. [single-page-cv-linux-vm-workflow.md](./single-page-cv-linux-vm-workflow.md)
 7. [web-pdf-generation-options.md](./web-pdf-generation-options.md)
-8. [commit-style.md](./commit-style.md)
-9. [rearchitecture-plan.md](./rearchitecture-plan.md)
-10. [content-model.md](./content-model.md)
+8. [node-module-scripts.md](./node-module-scripts.md)
+9. [commit-style.md](./commit-style.md)
+10. [rearchitecture-plan.md](./rearchitecture-plan.md)
+11. [content-model.md](./content-model.md)
 
 ## Documents
 
@@ -87,6 +88,12 @@ Records the current PDF generation direction for the web renderer, including:
   - `single-page-cv/public/yh_resume_cht.pdf`
 
 Read this when you want to understand or extend the React-based PDF generation workflow.
+
+### [node-module-scripts.md](./node-module-scripts.md)
+
+Explains why some repository scripts use the `.mjs` extension instead of `.js`.
+
+Read this when you want to understand the Node.js module format choice used by standalone generator and validator scripts.
 
 ### [commit-style.md](./commit-style.md)
 
