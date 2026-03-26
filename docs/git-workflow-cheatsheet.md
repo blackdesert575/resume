@@ -143,6 +143,37 @@ Then decide:
 - no remote change: `git push`
 - remote changed: `merge` or `rebase`, then `git push`
 
+## Real Example From This Repo
+
+This repository already produced a real case of CI-induced branch divergence.
+
+Observed sequence:
+
+1. local commit was created:
+   - `a706712` `Add git workflow cheatsheet`
+2. before pushing, `git fetch origin main` was run
+3. after fetch, branch state became:
+   - `ahead 1, behind 1`
+4. comparison showed:
+   - local-only commit: `a706712 Add git workflow cheatsheet`
+   - remote-only commit: `453a0d8 Commit from GitHub Actions (ci)`
+5. local branch was reconciled with:
+
+```bash
+git merge origin/main --no-edit
+```
+
+6. merge succeeded and created:
+   - `e26c525` `Merge remote-tracking branch 'origin/main'`
+7. merged branch was then pushed successfully
+
+The key point is:
+
+- the divergence was not caused by a second human edit
+- it was caused by GitHub Actions writing a CI-generated commit to `origin/main`
+
+This is exactly why `git fetch` is the safest first step in this repository before pushing.
+
 ## Related Documents
 
 - [index.md](/home/hong/repos/resume/docs/index.md)
