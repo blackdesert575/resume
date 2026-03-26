@@ -8,8 +8,9 @@ Recommended reading order:
 
 1. [current-workflow.md](/home/hong/repos/resume/docs/current-workflow.md)
 2. [future-workflow.md](/home/hong/repos/resume/docs/future-workflow.md)
-3. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
-4. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
+3. [git-workflow-cheatsheet.md](/home/hong/repos/resume/docs/git-workflow-cheatsheet.md)
+4. [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
+5. [content-model.md](/home/hong/repos/resume/docs/content-model.md)
 
 ## Documents
 
@@ -34,6 +35,17 @@ Describes the recommended future CI/CD workflow:
 - deployment consumes source revisions or build artifacts directly
 
 Read this after `current-workflow.md` to compare current and target workflows.
+
+### [git-workflow-cheatsheet.md](/home/hong/repos/resume/docs/git-workflow-cheatsheet.md)
+
+Explains the practical difference between:
+
+- `git fetch`
+- `git pull`
+- `git merge`
+- `git rebase`
+
+Read this when you need to resolve CI-induced remote branch movement safely.
 
 ### [rearchitecture-plan.md](/home/hong/repos/resume/docs/rearchitecture-plan.md)
 
