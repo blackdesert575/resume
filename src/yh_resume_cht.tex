@@ -175,54 +175,59 @@
   \resumeSubHeadingListStart
 
 \resumeSubheading
-  {System / DevOps Engineer}{Jun. 2025 -- Present}
+  {System / DevOps Engineer}{Jun. 2025 -- March. 2026}
   {雷技資訊科技有限公司}{}
   \resumeItemListStart
-    \resumeItem{在\textbf{Linux}終端機環境中工作。}
-    \resumeItem{使用Pakcer 構築與維護以\textbf{Rocky Linux}作為基底的EC2 機器映像檔(AMI)}
-    \resumeItem{主要在台灣工程團隊內，維運\textbf{AWS 與地端(on-premise)基礎設施}，並實際導入與使用 以 Git 為核心的 \textbf{Infrastructure as Code 工作流程(Terraform / Terragrunt / Atlantis)}}
-    \resumeItem{協助審查與驗證既有\textbf{技術文件與基礎設施流程}，並辨識跨區域之間的流程與標準不一致問題。}
-    \resumeItem{維護並實作 透過 Ansible 進行的系統初始化自動化(包含 Linux 設定、Java 執行環境、Nginx、RabbitMQ、NFS 部署)}
-    \resumeItem{為台灣工程團隊建立與維護 基於 Groovy Script 的 Jenkins CI/CD 流水線。}
-    \resumeItem{管理 Bastion 主機與內部資產追蹤系統(Consul + Golang 開發的微服務)，並將 EC2 metadata 整合至集中式存取控制機制。}
-    \resumeItem{透過觀測性系統(Prometheus / Grafana)分析 系統資源使用情況與效能指標，以識別 基礎設施瓶頸並提出合適的優化方案。}
-    \resumeItem{維護觀測性技術堆疊\textbf{(Prometheus、Grafana、Consul)}，並支援整體系統監控運作。}
+    \resumeItem{設計並維護基於 \textbf{Rocky Linux} 的 EC2 機器映像檔（AMI），透過 \textbf{Packer} 建立標準化映像流程，提升部署一致性與可重現性}
+    \resumeItem{於台灣工程團隊中維運 \textbf{AWS 與地端（on-premise）混合雲基礎設施}，並導入以 Git 為核心的 \textbf{Infrastructure as Code（Terraform / Terragrunt / Atlantis）} 工作流程，提升變更可追蹤性與部署穩定性}
+    \resumeItem{建置 \textbf{Ansible 自動化初始化流程}（Linux 設定、Java runtime、Nginx、RabbitMQ、NFS），將手動配置轉為可重現之基礎設施，降低人為錯誤並提升擴展效率}
+    \resumeItem{設計並維護基於 \textbf{Jenkins（Groovy）} 的 CI/CD 流水線，支援多環境部署流程，提升交付穩定性與部署效率}
+    \resumeItem{管理 Bastion 主機與內部資產追蹤系統（\textbf{Consul + Golang 微服務}），並整合 EC2 metadata 至集中式存取控制機制，強化系統安全性與可維運性}
+    \resumeItem{透過 \textbf{Prometheus / Grafana} 分析系統效能（CPU / Memory / I/O），識別基礎設施瓶頸並提出優化策略（如資源配置調整與擴展策略）}
+    \resumeItem{維護觀測性技術堆疊（\textbf{Prometheus、Grafana、Consul}），確保監控系統穩定運作並支援日常維運}
+    \resumeItem{協助審查跨區域基礎設施與技術文件，識別流程與標準不一致問題，並提出改善建議以提升跨團隊協作效率}
   \resumeItemListEnd
 
-  \resumeSubheading
+\resumeSubheading
   {System/Site Reliability Engineering (SRE)/DevOps Engineering}{Nov. 2023 -- Dec. 2024}
   {眾鼎科技有限公司}{}  
   \resumeItemListStart
-    \resumeItem{在\textbf{Linux}終端機環境中工作。}
-    \resumeItem{參與輪值待命(on-call，約每月 1 週)，與團隊成員共同排除正式環境(Prod)中的各類問題。}
-    \resumeItem{支援部署於 AWS 或地端基礎設施上的加密貨幣交易所平台。}
-    \resumeItem{管理與維運部署於 AWS 或地端環境的 Kubernetes(k8s)叢集。}
-    \resumeItem{使用 Pulumi / Ansible 進行 AWS 與 Cloudflare 基礎設施管理。}
-    \resumeItem{管理與維運 基於 GitLab CI 或 Jenkins 的 CI/CD 流水線。}
+    \resumeItem{於 \textbf{Linux} 終端機環境中進行系統維運與故障排除，支援高可用性服務運行}
+    \resumeItem{參與輪值待命（on-call，每月約 1 週），負責處理正式環境（Prod）中的 \textbf{production incidents}，包含服務異常、資源瓶頸與部署問題}
+    \resumeItem{針對 production issue 進行 root cause analysis（RCA），定位問題來源（如 \textbf{Kubernetes deployment failure、資源不足、服務依賴異常}），並提出修復與預防措施}
+    \resumeItem{支援加密貨幣交易所平台於 \textbf{AWS 與 on-premise 混合環境}之部署與維運，確保關鍵服務穩定運作}
+    \resumeItem{管理與維運 \textbf{Kubernetes（k8s）叢集}，處理容器調度、服務異常與部署問題，提升系統可靠性與恢復能力}
+    \resumeItem{使用 \textbf{Pulumi / Ansible} 進行基礎設施管理與自動化，降低手動操作風險並提升環境一致性}
+    \resumeItem{維護 \textbf{GitLab CI / Jenkins} CI/CD 流水線，支援服務部署與版本更新，並協助排除部署流程中的異常問題}
+    \resumeItem{協助分析後端服務問題（API latency、database query、message queue 延遲），提升系統效能與穩定性}
+    \resumeItem{優化 Java(Spring Boot)或Go(Gin) 服務的 Dockerfile 與 container entrypoint，修正 PID 1 signal handling 問題，確保容器在 Kubernetes rolling update 或 service restart 時可正確接收 SIGTERM 並完成 graceful shutdown}
   \resumeItemListEnd
 
-  \resumeSubheading
-  {Site Reliability Engineering (SRE)/DevOps/Cloud engineering}{Nov. 2021 -- April. 2023}
+\resumeSubheading
+  {Site Reliability Engineering (SRE) / DevOps / Cloud Engineering}{Nov. 2021 -- Apr. 2023}
   {雲磐科技有限公司}{}  
   \resumeItemListStart
-    \resumeItem{在\textbf{Linux}終端機環境中工作。}
-    \resumeItem{參與輪值待命(on-call)，與團隊成員共同排除各類系統問題。}
-    \resumeItem{開發 基於 Python 的網站監控自動化專案。}
-    \resumeItem{開發 基於 GCP(GKE)與阿里雲(ACK)的串流平台專案。}
-    \resumeItem{透過 JumpServer 管理 雲端基礎設施(AWS/GCP/阿里雲/Cloudflare 等)。}
-    \resumeItem{管理與維運部署於 AWS(EKS)/GCP(GKE)/阿里雲(ACK)的 Kubernetes(k8s)叢集。}
-    \resumeItem{管理與維運 基於 GitLab CI/Jenkins/Tekton 的 CI/CD 流水線。}
+    \resumeItem{於 \textbf{Linux} 環境中進行系統維運與故障排除，支援分散式服務穩定運行}
+    \resumeItem{參與輪值待命（on-call），處理 production 環境中的服務異常與系統問題，並協助進行 root cause analysis（RCA）}
+    \resumeItem{開發 \textbf{Python 自動化監控系統}，用於網站健康檢查與異常偵測，降低人工巡檢成本並提升問題發現效率}
+    \resumeItem{參與建置基於 \textbf{GCP（GKE）與阿里雲（ACK）} 的串流平台系統，支援跨雲環境的服務部署與運行}
+    \resumeItem{透過 \textbf{JumpServer} 管理多雲基礎設施（AWS / GCP / 阿里雲 / Cloudflare），提升存取控管與操作一致性}
+    \resumeItem{管理與維運 \textbf{Kubernetes（EKS / GKE / ACK）叢集}，處理容器調度、服務部署與異常排查，強化系統可靠性}
+    \resumeItem{維護 \textbf{GitLab CI / Jenkins / Tekton} CI/CD 流水線，支援服務建置與部署流程，提升交付效率與穩定性}
+    \resumeItem{協助排查分散式系統問題（服務間連線、資源競爭、部署不一致），提升系統穩定性與可觀測性}
   \resumeItemListEnd
 
 \resumeSubheading
   {物聯網整合開發人才就業班}{Jan. 2021 -- May. 2021}
   {工業技術研究院 產業學院}{}
   \resumeItemListStart
-    \resumeItem{完成一項密集的\textbf{實作導向培訓課程}，內容涵蓋\textbf{網頁開發基礎、系統程式設計、Linux 環境、網路基礎，以及 IoT 系統整合。}}
-    \resumeItem{使用\textbf{Raspberry Pi}與\textbf{ESP8266}建置一套\textbf{IoT 監控系統（IndoorAirBox）}，專注於溫度與濕度資料蒐集，並結合課程所提供之資源完成實作。}
+    \resumeItem{完成密集型 \textbf{實作導向培訓}，涵蓋 \textbf{Linux 系統、網路基礎、Web 開發與系統程式設計}，建立軟體工程與系統整合基礎}
+    \resumeItem{設計並實作 \textbf{IoT 監控系統（IndoorAirBox）}，使用 \textbf{Raspberry Pi 與 ESP8266} 進行溫濕度資料蒐集與設備整合}
+    \resumeItem{實作裝置端資料收集與系統整合流程，完成從 \textbf{資料產生 → 傳輸 → 處理} 的端到端系統驗證}
+    \resumeItem{熟悉嵌入式設備與 Linux 環境整合，建立基礎的 \textbf{系統設計與問題拆解能力}}
   \resumeItemListEnd
 
-  \resumeSubHeadingListEnd  
+\resumeSubHeadingListEnd 
 
 %-----------PROJECTS-----------
 

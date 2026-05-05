@@ -1,7 +1,8 @@
 # resume
 
-My resume generated from *.tex file to request a job.
-LaTeX template for my personal resume forked from [jakegut / resume](https://github.com/jakegut/resume)
+* My resume generated from *.tex file to request a job.
+* LaTeX template for my personal resume forked from [jakegut / resume](https://github.com/jakegut/resume)
+* More document parser, Input/Output Handling
 
 ## current status
 
@@ -45,6 +46,12 @@ Recent changes:
   - workflow, architecture, content model, learning notes, and local development guides
 - `output/`
   - generated web artifacts currently used by deployment flow
+
+## to-do-list
+
+* What is 
+* impl more document File Converter, parser, Input/Output Handling and more
+  * tex --> pdf --> html  
 
 ## quick start
 
