@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'src/yh_resume.tex'
+      - 'src/yh_resume_cht.tex'
 
 permissions:
   contents: write
