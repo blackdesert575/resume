@@ -364,3 +364,39 @@ bash ./scripts/build.sh
 # run with bash shell scripts
 bash ./scripts/start.sh
 ```
+
+
+## CI/CD Pipelines
+
+* CI with GithubAction
+* CD with Cloudflare Pages
+
+```text
+CI
+│
+▼
+src/yh_resume.tex ─────┐
+                       │
+src/yh_resume_cht.tex ─┼── GitHub Actions
+                       │
+                       ▼
+                  LaTeX compile
+                       │
+                       ▼
+                   PDF / HTML
+                       │
+                       ▼
+               output directory
+                       │
+                       ▼
+              git commit + push
+                       │
+                       ▼
+                      CD
+                       │
+                       ▼
+               Cloudflare Pages
+                       │
+                       ▼
+                  Production
+```
