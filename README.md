@@ -4,52 +4,9 @@
 * LaTeX template for my personal resume forked from [jakegut / resume](https://github.com/jakegut/resume)
 * More document parser, Input/Output Handling
 
-## current status
-
-This repository is currently in a transition period:
-
-- `src/*.tex` is still the main source for the production PDF workflow
-- `content/*.json` now exists as a new structured content layer
-- `single-page-cv/` is no longer only a PDF wrapper, it can now render resume content as a web page
-- `docs/` now records the current workflow, target workflow, content model, learning guides, and local development instructions
-
-Recent changes:
-
-- added structured content files:
-  - `content/resume.en.json`
-  - `content/resume.zh.json`
-- added jq-based content validation:
-  - `bash scripts/validate_content_json.sh`
-- added Node.js-based content validation inside `single-page-cv/`:
-  - `cd single-page-cv && npm run validate:content`
-- updated `single-page-cv/` to render JSON content instead of only embedding PDF
-- added simple `EN / ZH` query-string switching in `single-page-cv/`
-- improved `single-page-cv/` structure by splitting the resume page into smaller components and moving content helpers into `src/lib/`
-- fixed `single-page-cv` lint so both `npm run lint` and `npm run build` now work
-- added React-based PDF generation for `single-page-cv/` with `@react-pdf/renderer`
-  - `cd single-page-cv && npm run pdf:generate`
-  - `bash scripts/generate_single-page-cv_pdf.sh`
-- added local Linux VM helper scripts for `single-page-cv/`
-- expanded `docs/` so the repository architecture and workflow are documented inside the repo
-
-## repository map
-
-- `src/`
-  - LaTeX resume sources and generated PDFs
-- `content/`
-  - structured resume data for web and future renderer refactors
-- `single-page-cv/`
-  - Next.js app for the web version of the resume
-- `scripts/`
-  - helper scripts for PDF build, web app local workflow, validation, and deployment
-- `docs/`
-  - workflow, architecture, content model, learning notes, and local development guides
-- `output/`
-  - generated web artifacts currently used by deployment flow
-
 ## to-do-list
 
-* What is 
+* Remove unused, deprecated repo dirs or files : scripts/, single-page-cv/, docs/, ...etc to avoid repo tree complicated
 * impl more document File Converter, parser, Input/Output Handling and more
   * tex --> pdf --> html  
 
