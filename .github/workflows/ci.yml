@@ -1,13 +1,15 @@
 name: ci
-# run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   build_latex:
-    if: github.actor != 'github-actions[bot]'
+    if: github.actor == github.repository_owner
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
